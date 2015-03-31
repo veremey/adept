@@ -1,0 +1,288 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)
+// =book
+// 	font-family: "book", Arial, sans-serif
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+$menu: #1d1d1d
+$red: #aa0002
+$text: #8b8282
+$n: transparent
+
+body
+	font-family: "Open Sans", Arial, sans-serif
+	font-size: 16px
+	line-height: 1.4
+	background-color: #F9F7F7
+
+a
+	text-decoration: none
+.out
+	position: relative
+	width: 1230px
+	margin: 0 auto
+	z-index: 2
+	+clr
+
+//  HEADER
+
+
+.header
+	position: relative
+	background-color: #FFF
+	z-index: 9999
+	+clr
+.header__white
+	float: left
+	width: 920px
+	height: 100%
+	padding: 25px 0
+	background-color: #fff
+	+clr
+.logo
+	display: block
+	float: left
+	+s(logo)
+.hidetext
+	+hidetext
+
+.menu
+	margin-left: 310px
+	font-size: 0
+	li
+		position: relative
+		display: inline-block
+		height: 37px
+		&:hover
+			.submenu
+				display: block
+	&__link
+		display: inline-block
+		position: relative
+		font-size: 14px
+		color: $menu
+		padding: 10px
+		text-transform: uppercase
+		border: 1px solid $n
+		// +font
+		&:hover
+			&:before
+				content: ""
+				border: 1px solid #ccc5c5
+				border-radius: 4px
+				-webkit-transform: skew(-20deg)
+				-moz-transform: skew(-20deg)
+				-o-transform: skew(-20deg)
+				+coverdiv
+.has__sub
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		bottom: 5px
+		right: 30px
+		+arr(10, 5, #fff, b)
+		z-index: 9999
+.submenu
+	display: none
+	position: absolute
+	top: 30px
+	left: -30px
+	background-color: #898282
+	padding: 20px 25px
+	z-index: 999
+	li
+		width: 200px
+		height: auto
+		border-bottom: 1px solid #9B9595
+		&:last-child
+			border-bottom: 1px solid $n
+	.submenu__link
+		display: block
+		color: #FFF
+		padding-left: 5px
+		font-size: 16px
+		line-height: 35px
+		// +font
+		&:hover
+			background-color: #807979
+		&:active
+			background-color: #544c4c
+
+.header__gray
+	float: right
+	width: 310px
+	padding: 40px 0 30px
+	background-color: #898282
+	+clr
+.tel
+	position: relative
+	float: left
+	color: #fff
+	margin-left: 65px
+	&:before
+		content: ""
+		position: absolute
+		top: 1px
+		left: -25px
+		+s(tel)
+.lang
+	float: right
+	+clr
+	li
+		display: inline-block
+		margin-right: 10px
+		&:last-child
+			margin-right: 0
+		.is-active
+			color: #D1CDCD
+			&:hover
+				border-bottom: 1px solid $n
+				font-weight: normal
+	a
+		color: #fff
+		&:hover
+			border-bottom: 2px solid #fff
+			// font-weight: bold
+		&:active
+			color: #D1CDCD
+			border-bottom: 1px solid #D1CDCD
+			// font-weight: bold
+.gray__bg
+	position: absolute
+	right: 0
+	top: 0
+	width: 50%
+	height: 100%
+	background-color: #898282
+	z-index: 1
+
+
+
+// footer
+
+
+.footer
+	+clr
+.footer__top
+	background-color: #FFF
+	height: 100px
+	+clr
+.social
+	width: 20%
+	float: left
+	margin-top: 47px
+	a
+		float: left
+		width: 15px
+		height: 15px
+		position: relative
+		display: block
+		padding: 5px
+		margin-right: 35px
+	+clr
+.soc_f
+	&:after
+		content: ''
+		position: absolute
+		top: 5px
+		left: 10px
+		+s(f)
+	&:hover
+		&:after
+			+s(f_h)
+	&:active
+		&:after
+			+s(f_a)
+.soc_vk
+	&:after
+		content: ''
+		position: absolute
+		top: 5px
+		left: 10px
+		+s(vk)
+	&:hover
+		&:after
+			+s(vk_h)
+	&:active
+		&:after
+			+s(vk_a)
+.soc_tw
+	&:after
+		content: ''
+		position: absolute
+		top: 5px
+		left: 10px
+		+s(tw)
+	&:hover
+		&:after
+			+s(tw_h)
+	&:active
+		&:after
+			+s(tw_a)
+.footer__menu
+	float: right
+	margin: 35px 30px 0 0
+	+clr
+.footer__bottom
+	height: 130px
+	p
+		color: #a09998
+		font-size: 12px
+	+clr
+.copy
+	float: left
+	margin-top: 52px
+.made
+	float: right
+	color: #a09998
+	font-size: 12px
+	line-height: 20px
+	margin-top: 52px
+	&:hover
+		color: #970002
+	&:active
+		color: #770002

@@ -1,0 +1,123 @@
+// default layout
+.gray
+	+gray
+
+
+.slider
+	position: relative
+	margin: 0 0 75px
+	float: left
+	width: 100%
+	height: 545px
+	+clr
+
+.slider .cycle-slideshow
+	height: 540px
+	overflow: hidden
+.big-slider__item
+	position: static
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 100
+	opacity: 1
+	visibility: hidden
+	display: block
+	height: 540px
+
+.big-slider__img
+	position: absolute
+	width: 2000px
+	left: 50%
+	margin-left: -1000px
+	max-height: 540px
+	text-align: center
+	height: 540px
+	img
+		height: 100%
+		width: auto
+.slider .nav
+	position: absolute
+	width: 300px
+	bottom: 8px
+	left: 50%
+	text-align: center
+	margin-left: -150px
+	z-index: 999
+	button
+		width: 12px
+		height: 12px
+		border-radius: 50%
+		background-color: #fff
+		opacity: 0.8
+		margin-left: 15px
+		&:hover
+			+scale(1.2)
+	.is-active
+		width: 14px
+		height: 14px
+		background-color: transparent
+		border: 1px solid $text
+		&:hover
+			+scale(1)
+	+clr
+.slider__title
+	font-size: 101px
+	color: #FFF
+	margin: 90px 0 50px
+	// +font
+.slider__content
+	position: relative
+	display: inline-block
+	color: #FFF
+	margin-bottom: 6px
+	padding: 5px 5px 5px 10px
+	background-color: $red
+	&:after
+		content: ""
+		position: absolute
+		right: -8px
+		top: 0
+		bottom: 0
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 32px 8px 0 0
+		border-color: $red transparent transparent transparent
+
+.good
+	max-width: 50%
+	float: left
+	-webkit-box-sizing: content-box
+	-moz-box-sizing: content-box
+	box-sizing: content-box
+	img
+		float: left
+		width: 50%
+		height: 275px
+	+clr
+
+.good__item
+	width: 50%
+	float: left
+	margin: 45px 50px 40px 40px
+	-webkit-box-sizing: content-box
+	-moz-box-sizing: content-box
+	box-sizing: content-box
+	-ms-word-break: break-all
+	word-break: break-all
+	a
+		display: block
+	+clr
+.good__item_title,
+.good__item_content
+	-ms-word-break: break-all
+	word-break: break-all
+
+
+
+
+
+.clear
+	clear: both
+	height: 0
