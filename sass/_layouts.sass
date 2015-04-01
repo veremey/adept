@@ -267,7 +267,30 @@
 	width: 615px
 	float: left
 	background-color: #FFF
-
+	.btn
+		position: relative
+		float: right
+		background-color: #FFF
+		font-size: 11px
+		color: #191919
+		border: 1px solid #E9E5E4
+		padding-left: 40px
+		margin-right: 93px
+		+l_black
+		&:after
+			content: ""
+			position: absolute
+			top: 18px
+			left: 20px
+			+s(pl)
+		&:hover
+			background-color: #f9f7f7
+			border-color: #dbd7d6
+		&:active
+			background-color: #f1efef
+			border-color: #dbd7d6
+	+clr
+.partner__item_wrap
 	+clr
 .partner__col
 	width: 230px
@@ -283,3 +306,11 @@
 	font-size: 26px
 	color: #191919
 	+l_l
+.partner__item_img
+	float: left
+	position: relative
+	height: 440px
+	width: 307px
+	overflow: hidden
+	img
+		height: 440px
