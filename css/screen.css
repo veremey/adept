@@ -130,14 +130,57 @@ a { text-decoration: none; }
 .slider__content { position: relative; display: inline-block; color: white; margin-bottom: 6px; padding: 5px 5px 5px 10px; background-color: #aa0002; }
 .slider__content:after { content: ""; position: absolute; right: -8px; top: 0; bottom: 0; width: 0; height: 0; border-style: solid; border-width: 32px 8px 0 0; border-color: #aa0002 transparent transparent transparent; }
 
-.good { max-width: 50%; float: left; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; *zoom: 1; }
-.good img { float: left; width: 50%; height: 275px; }
-.good:after { content: " "; display: table; clear: both; }
+.service { margin-bottom: 70px; *zoom: 1; }
+.service:after { content: " "; display: table; clear: both; }
 
-.good__item { width: 50%; float: left; margin: 45px 50px 40px 40px; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; -ms-word-break: break-all; word-break: break-all; *zoom: 1; }
+.good { display: block; width: 50%; float: left; position: relative; max-height: 275px; background-color: white; *zoom: 1; }
+.good:after { content: " "; display: table; clear: both; }
+.good:hover .good__item { -webkit-transform: scale(0); -moz-transform: scale(0); -o-transform: scale(0); -ms-transform: scale(0); transform: scale(0); opacity: 0; -webkit-transition-delay: 0s; -moz-transition-delay: 0s; -o-transition-delay: 0s; -ms-transition-delay: 0s; transition-delay: 0s; }
+.good:hover .mask { opacity: 1; -webkit-transform: scale(-1) rotate(-180deg); -moz-transform: scale(-1) rotate(-180deg); -o-transform: scale(-1) rotate(-180deg); -ms-transform: scale(-1) rotate(-180deg); transform: scale(-1) rotate(-180deg); -webkit-transition: all 0.4s ease-in; -moz-transition: all 0.4s ease-in; -o-transition: all 0.4s ease-in; -ms-transition: all 0.4s ease-in; transition: all 0.4s ease-in; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; }
+.good:hover .good__img:after { -webkit-transition: all 0.6s ease-in; -moz-transition: all 0.6s ease-in; -o-transition: all 0.6s ease-in; -ms-transition: all 0.6s ease-in; transition: all 0.6s ease-in; width: 0px; height: 0px; border-style: solid; border-width: 8px 8px 8px 0; border-color: transparent #aa0002 transparent transparent; }
+.good:hover .mask + .good__img:after { -webkit-transition: all 0.6s ease-in; -moz-transition: all 0.6s ease-in; -o-transition: all 0.6s ease-in; -ms-transition: all 0.6s ease-in; transition: all 0.6s ease-in; width: 0px; height: 0px; border-style: solid; border-width: 8px 0 8px 8px; border-color: transparent transparent transparent #aa0002; }
+
+.top__cut:after { content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 61px 72px 0; border-color: transparent #f9f7f7 transparent transparent; }
+
+.bottom__cut:after { content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 0; border-style: solid; border-width: 72px 0 0 61px; border-color: transparent transparent transparent #f9f7f7; }
+
+.good__img { position: relative; float: left; height: 275px; max-width: 307px; }
+.good__img img { height: 275px; }
+.good__img:after { content: ""; position: absolute; top: 45px; right: 0px; width: 0px; height: 0px; border-style: solid; border-width: 8px 8px 8px 0; border-color: transparent white transparent transparent; }
+
+.good__item { display: block; float: left; width: 50%; position: relative; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; vertical-align: top; height: 275px; background-color: white; *zoom: 1; }
 .good__item a { display: block; }
 .good__item:after { content: " "; display: table; clear: both; }
 
-.good__item_title, .good__item_content { -ms-word-break: break-all; word-break: break-all; }
+.good__item_title { color: #aa0002; margin: 45px 0 25px 40px; font-size: 16px; text-transform: uppercase; -webkit-transition: all 0.4s ease-in-out 0.2s; -moz-transition: all 0.4s ease-in-out 0.2s; -o-transition: all 0.4s ease-in-out 0.2s; -ms-transition: all 0.4s ease-in-out 0.2s; transition: all 0.4s ease-in-out 0.2s; opacity: 1; font-family: "Lato", Arial, sans-serif; font-weight: 800; }
+
+.good__item_content { font-size: 16px; color: #8b8282; margin: 0 39px; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; font-family: "Open Sans", Arial, sans-serif; font-weight: 400; }
+
+.good__more { position: absolute; bottom: 30px; right: 30px; width: 45px; height: 45px; border-radius: 50%; background-color: #f1efef; }
+.good__more:after { content: ""; position: absolute; top: 50%; left: 50%; margin: -3px 0 0 -3px; background: url('../img/icons-sda759b754f.png') 0 0 no-repeat; width: 6px; height: 7px; }
+
+.mask { position: absolute; top: 0; left: 50%; width: 50%; height: 100%; overflow: hidden; background-color: #aa0002; color: white; opacity: 0; }
+.mask p { margin: 39px; font-size: 14px; font-family: "Open Sans", Arial, sans-serif; font-weight: 300; }
+
+.btn { background-color: #aa0002; border: 1px solid #bb6a70; margin-left: 40px; padding: 15px 20px; color: white; text-transform: uppercase; font-size: 12px; font-family: "Lato", Arial, sans-serif; font-weight: 800; }
+.btn:hover { background-color: white; color: red; }
+.btn:active { background-color: #ecd8d8; }
+
+.mask + .good__img:after { content: ""; position: absolute; top: 45px; left: 0px; width: 0px; height: 0px; border-style: solid; border-width: 8px 0 8px 8px; border-color: transparent transparent transparent white; }
+
+.partner__item { width: 615px; float: left; background-color: white; *zoom: 1; }
+.partner__item:after { content: " "; display: table; clear: both; }
+
+.partner__col { width: 230px; float: left; margin: 45px 50px 0 15px; }
+.partner__col:first-child { margin-left: 40px; }
+.partner__col p { font-size: 16px; color: #8b8282; font-family: "Open Sans", Arial, sans-serif; font-weight: 400; }
+
+.partner__title { font-size: 26px; color: #191919; font-family: "Lato", Arial, sans-serif; font-weight: 300; }
 
 .clear { clear: both; height: 0; }
+
+.pull__right { float: right; }
+
+.pull__left { float: left; }
+
+.take__left { left: 0; }

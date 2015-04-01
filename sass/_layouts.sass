@@ -85,39 +85,201 @@
 		border-width: 32px 8px 0 0
 		border-color: $red transparent transparent transparent
 
-.good
-	max-width: 50%
-	float: left
-	-webkit-box-sizing: content-box
-	-moz-box-sizing: content-box
-	box-sizing: content-box
-	img
-		float: left
-		width: 50%
-		height: 275px
+.service
+	margin-bottom: 70px
 	+clr
 
-.good__item
+.good
+	display: block
 	width: 50%
 	float: left
-	margin: 45px 50px 40px 40px
+	position: relative
+	max-height: 275px
+	background-color: #FFF
+	+clr
+	&:hover
+		.good__item
+			-webkit-transform: scale(0)
+			-moz-transform: scale(0)
+			-o-transform: scale(0)
+			-ms-transform: scale(0)
+			transform: scale(0)
+			opacity: 0
+			-webkit-transition-delay: 0s
+			-moz-transition-delay: 0s
+			-o-transition-delay: 0s
+			-ms-transition-delay: 0s
+			transition-delay: 0s
+		.mask
+			opacity: 1
+			-webkit-transform: scale(-1) rotate(-180deg)
+			-moz-transform: scale(-1) rotate(-180deg)
+			-o-transform: scale(-1) rotate(-180deg)
+			-ms-transform: scale(-1) rotate(-180deg)
+			transform: scale(-1) rotate(-180deg)
+			-webkit-transition: all 0.4s ease-in
+			-moz-transition: all 0.4s ease-in
+			-o-transition: all 0.4s ease-in
+			-ms-transition: all 0.4s ease-in
+			transition: all 0.4s ease-in
+			-webkit-border-radius: 0px
+			-moz-border-radius: 0px
+			border-radius: 0px
+		.good__img
+			&:after
+				-webkit-transition: all 0.6s ease-in
+				-moz-transition: all 0.6s ease-in
+				-o-transition: all 0.6s ease-in
+				-ms-transition: all 0.6s ease-in
+				transition: all 0.6s ease-in
+				+arr(8, 16, $red ,l)
+		.mask + .good__img
+			&:after
+				-webkit-transition: all 0.6s ease-in
+				-moz-transition: all 0.6s ease-in
+				-o-transition: all 0.6s ease-in
+				-ms-transition: all 0.6s ease-in
+				transition: all 0.6s ease-in
+				+arr(8, 16, $red ,r)
+.top__cut
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 61px 72px 0
+		border-color: transparent #f9f7f7 transparent transparent
+.bottom__cut
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 72px 0 0 61px
+		border-color: transparent transparent transparent #f9f7f7
+.good__img
+	position: relative
+	float: left
+	height: 275px
+	max-width: 307px
+	img
+		height: 275px
+	&:after
+		content: ""
+		position: absolute
+		top: 45px
+		right: 0px
+		+arr(8, 16, #fff ,l)
+.good__item
+	display: block
+	float: left
+	width: 50%
+	position: relative
 	-webkit-box-sizing: content-box
 	-moz-box-sizing: content-box
 	box-sizing: content-box
-	-ms-word-break: break-all
-	word-break: break-all
+	vertical-align: top
+	height: 275px
+	background-color: #fff
 	a
 		display: block
 	+clr
-.good__item_title,
+.good__item_title
+	color: $red
+	margin: 45px 0 25px 40px
+	font-size: 16px
+	text-transform: uppercase
+	-webkit-transition: all 0.4s ease-in-out 0.2s
+	-moz-transition: all 0.4s ease-in-out 0.2s
+	-o-transition: all 0.4s ease-in-out 0.2s
+	-ms-transition: all 0.4s ease-in-out 0.2s
+	transition: all 0.4s ease-in-out 0.2s
+	opacity: 1
+	+l_black
 .good__item_content
-	-ms-word-break: break-all
-	word-break: break-all
+	font-size: 16px
+	color: $text
+	margin: 0 39px
+	-webkit-hyphens: auto
+	-moz-hyphens: auto
+	hyphens: auto
+	+os
+.good__more
+	position: absolute
+	bottom: 30px
+	right: 30px
+	width: 45px
+	height: 45px
+	border-radius: 50%
+	background-color: #f1efef
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -3px 0 0 -3px
+		+s(bird)
+
+.mask
+	position: absolute
+	top: 0
+	left: 50%
+	width: 50%
+	height: 100%
+	overflow: hidden
+	background-color: $red
+	color: #FFF
+	opacity: 0
+	p
+		margin: 39px
+		font-size: 14px
+		+os_l
+.btn
+	background-color: $red
+	border: 1px solid #bb6a70
+	margin-left: 40px
+	padding: 15px 20px
+	color: #FFF
+	text-transform: uppercase
+	font-size: 12px
+	+l_black
+	&:hover
+		background-color: #FFF
+		color: red
+	&:active
+		background-color: #ECD8D8
+.mask + .good__img
+	&:after
+		content: ""
+		position: absolute
+		top: 45px
+		left: 0px
+		+arr(8, 16, #fff ,r)
 
 
+.partner__item
+	width: 615px
+	float: left
+	background-color: #FFF
 
-
-
-.clear
-	clear: both
-	height: 0
+	+clr
+.partner__col
+	width: 230px
+	float: left
+	margin: 45px 50px 0 15px
+	&:first-child
+		margin-left: 40px
+	p
+		font-size: 16px
+		color: $text
+		+os
+.partner__title
+	font-size: 26px
+	color: #191919
+	+l_l
