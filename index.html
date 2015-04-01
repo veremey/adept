@@ -33,6 +33,21 @@
 				<li><a href="#" class="menu__link">Пресс-центр</a></li>
 				<li><a href="#" class="menu__link">Контакты</a></li>
 			</ul>
+			<div class="nav"> <span>Menu</span>
+				<nav>
+					<ul>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Курсы</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="bt-nav">
+					<div class="line line1"></div>
+					<div class="line line2"></div>
+					<div class="line line3"></div>
+				</div>
+			</div>
 		</div>
 		<div class="header__gray">
 			<a class="tel" href="tel:+7 701 962 48 42" class="tel">+7 701 962 48 42</a>
@@ -53,8 +68,6 @@
 		data-cycle-pager=".js-pager"
 		data-cycle-pager-active-class="is-active"
 		data-cycle-pager-template="<button></button>"
-		data-cycle-prev=".js-big-slider-prev"
-		data-cycle-next=".js-big-slider-next"
 		data-cycle-prev=".js-slider-prev"
 		data-cycle-next=".js-slider-next">
 		<li class="big-slider__item js-big-slider-item">
@@ -85,7 +98,7 @@
 <div class="clear"></div>
 <!-- SERVICE -->
 <div class="out service">
-	<a href="#" class="good">
+	<a href="#" class="good top__cut_small">
 		<div class="good__img">
 			<img src="img/ur.png" alt="">
 		</div>
@@ -133,7 +146,7 @@
 			<img src="img/cal.png" alt="">
 		</div>
 	</a>
-	<a href="#" class="good">
+	<a href="#" class="good bottom__cut_small">
 		<div class="good__item ">
 			<h3 class="good__item_title">
 				Курсы корейского языка
@@ -155,16 +168,16 @@
 	<div class="partner__item">
 		<div class="partner__item_wrap">
 			<div class="partner__col">
-			<h3 class="partner__title">Adept Consulting - теплый прием  и плодотворное сотрудничество
-			</h3>
-			<p>
+				<h3 class="partner__title">Adept Consulting - теплый прием  и плодотворное сотрудничество
+				</h3>
+				<p>
 				В нашей команде – специалисты, которые любят и знают свою работу! Кроме этого, в нашем штате есть профессиональные тренеры и коуч.
-			</p>
+				</p>
 			</div>
-			<div class="partner__col">
-			<p>
+			<div class="partner__col pull__right">
+				<p>
 				Они разрабатывают и применяют специальные программы, призванные повысить личную и профессиональную квалификацию наших сотрудников! Таким образом, любая услуга всегда предоставлена на должномпрофессиональном уровне!
-			</p>
+				</p>
 			</div>
 		</div>
 		<button class="btn">Больше о нас</button>
@@ -194,12 +207,37 @@
 		</div>
 	</div>
 </div>
-<!-- NED PARTNER -->
+<!-- END PARTNER -->
 <div class="out ">
 	<h3 class="client"> Наши клиенты</h3>
-	<div class="pager">
+	<div id="pager">
 		<a class="page__back" href="#"></a>
 		<a class="page__next" href="#"></a>
+	</div>
+	<div class="clear"></div>
+	<ul class="cycle-slideshow"
+		data-cycle-fx="carousel"
+		data-cycle-slides=".client__slide"
+		data-cycle-timeout="2000"
+		data-cycle-next=".page__next"
+		data-cycle-prev=".page__back"
+		data-cycle-pager="#pager"
+		data-cycle-pager-active-class="is-active"
+		data-cycle-pager-template="<button></button>"
+		>
+			<li class="client__slide"><a href="#"><img src="img/stil.png" alt=""></a></li>
+			<li class="client__slide"><a href="#"><img src="img/card.png" alt=""></a></li>
+			<li class="client__slide"><a href="#"><img src="img/sour.png" alt=""></a></li>
+			<li class="client__slide"><a href="#"><img src="img/sab.png" alt=""></a></li>
+			<li class="client__slide"><a href="#"><img src="img/lake.png" alt=""></a></li>
+	</ul> <!-- SLIDESHOW -->
+</div>
+<div class="map out">
+	<img src="img/map.png" srcset="img/map_768.png" 768w,  alt="">
+	<div class="map__info">
+		<h3 class="map__info_title">Наш адрес</h3>
+		<p>Казахтан, г.Алматы, пр.Сейфуллина 531</p>
+		<button class="btn">все контакты</button>
 	</div>
 </div>
 <div class="footer">

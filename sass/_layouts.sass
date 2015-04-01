@@ -1,13 +1,12 @@
 // default layout
-.gray
-	+gray
+
 
 
 .slider
 	position: relative
 	margin: 0 0 75px
 	float: left
-	width: 100%
+	min-width: 100%
 	height: 545px
 	+clr
 
@@ -34,8 +33,8 @@
 	text-align: center
 	height: 540px
 	img
-		height: 100%
-		width: auto
+		height: 540px
+		width: 100%
 .slider .nav
 	position: absolute
 	width: 300px
@@ -65,7 +64,9 @@
 	font-size: 101px
 	color: #FFF
 	margin: 90px 0 50px
-	// +font
+	// +h8h
+	+r(768)
+		font-size: 78px
 .slider__content
 	position: relative
 	display: inline-block
@@ -73,6 +74,8 @@
 	margin-bottom: 6px
 	padding: 5px 5px 5px 10px
 	background-color: $red
+	font-size: 24px
+	// +bsp
 	&:after
 		content: ""
 		position: absolute
@@ -96,20 +99,23 @@
 	position: relative
 	max-height: 275px
 	background-color: #FFF
+	overflow: hidden
+	+r(768)
+		width: 100%
 	+clr
 	&:hover
 		.good__item
-			-webkit-transform: scale(0)
-			-moz-transform: scale(0)
-			-o-transform: scale(0)
-			-ms-transform: scale(0)
-			transform: scale(0)
+			-webkit-transform: scale(-1) rotate(180deg)
+			-moz-transform: scale(-1) rotate(180deg)
+			-o-transform: scale(-1) rotate(180deg)
+			-ms-transform: scale(-1) rotate(180deg)
+			transform: scale(-1) rotate(180deg)
 			opacity: 0
-			-webkit-transition-delay: 0s
-			-moz-transition-delay: 0s
-			-o-transition-delay: 0s
-			-ms-transition-delay: 0s
-			transition-delay: 0s
+			-webkit-transition: all 0.4s ease-in
+			-moz-transition: all 0.4s ease-in
+			-o-transition: all 0.4s ease-in
+			-ms-transition: all 0.4s ease-in
+			transition: all 0.4s ease-in
 		.mask
 			opacity: 1
 			-webkit-transform: scale(-1) rotate(-180deg)
@@ -142,6 +148,10 @@
 				transition: all 0.6s ease-in
 				+arr(8, 16, $red ,r)
 .top__cut
+	+r(768)
+		top: 275px
+		&:after
+			display: none
 	&:after
 		content: ""
 		position: absolute
@@ -152,7 +162,27 @@
 		border-style: solid
 		border-width: 0 61px 72px 0
 		border-color: transparent #f9f7f7 transparent transparent
+.top__cut_small
+	&:after
+		display: none
+	+r(768)
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 61px 72px 0
+			border-color: transparent #f9f7f7 transparent transparent
+
 .bottom__cut
+	+r(768)
+		top: -275px
+		&:after
+			display: none
 	&:after
 		content: ""
 		position: absolute
@@ -163,13 +193,33 @@
 		border-style: solid
 		border-width: 72px 0 0 61px
 		border-color: transparent transparent transparent #f9f7f7
+.bottom__cut_small
+	&:after
+		display: none
+	+r(768)
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 72px 0 0 61px
+			border-color: transparent transparent transparent #f9f7f7
 .good__img
 	position: relative
 	float: left
 	height: 275px
 	max-width: 307px
+	+r(768)
+		max-width: 50%
+		width: 343px
 	img
 		height: 275px
+		+r(768)
+			width: 343px
 	&:after
 		content: ""
 		position: absolute
@@ -192,7 +242,7 @@
 	+clr
 .good__item_title
 	color: $red
-	margin: 45px 0 25px 40px
+	margin: 45px 60px 25px 40px //del
 	font-size: 16px
 	text-transform: uppercase
 	-webkit-transition: all 0.4s ease-in-out 0.2s
@@ -270,6 +320,8 @@
 	float: left
 	background-color: #FFF
 	overflow: hidden
+	+r(768)
+		width: 680px
 	.btn
 		position: relative
 		float: right
@@ -311,13 +363,15 @@
 	+l_l
 .partner__item_img
 	float: left
-	width: 50%
 	position: relative
 	height: 440px
 	width: 307px
 	overflow: hidden
+	+r(768)
+		width: 50%
 	img
 		height: 440px
+		width: 100%
 	&:hover
 		.partner__container
 			background-color: $red
@@ -368,6 +422,9 @@
 	float: right
 	background-color: #F1EFEF
 	+clr
+	&__title
+		font-size: 28px
+		+l_l
 	&__cup
 		width: 100%
 		float: left
@@ -391,6 +448,8 @@
 			border-bottom: 1px solid #E0E5E9
 			border-right: 1px solid #E0E5E9
 			margin-left: -1px
+			+r(768)
+				width: 169px
 			&:nth-child(even)
 				margin-left: 0
 				border-right: 1px solid #fff
@@ -420,7 +479,7 @@
 	float: left
 	font-size: 28px
 	+l_l
-.pager
+#pager
 	float: right
 	width: 80px
 	margin-bottom: 30px
@@ -457,3 +516,72 @@
 	&:active
 		&:before
 			+s(bird_h)
+
+
+
+
+.cycle-slideshow
+	background-color: #fff
+	margin-bottom: 60px
+	.client__slide
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: 153px
+		background-color: #FFF
+		border-right: 1px solid #eee
+		a
+			display: block
+			height: 136px
+			img
+				position: relative
+				top: 50%
+				left: 50%
+				+translate(-50%,-50%)
+
+
+.map
+	position: relative
+	height: 439px
+	margin-bottom: 40px
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 0 73px 77px
+		border-color: transparent transparent #fff transparent
+	img
+		height: 439px
+		width: 100%
+	button
+		background-color: $n
+		border: 1px solid #818186
+		&:hover
+			background-color: #898282
+			border: #898282
+			color: #fff
+		&:active
+			background-color: #776969
+			border: #776969
+			color: #fff
+.map__info
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 430px
+	height: 215px
+	color: #FFF
+	p
+		font-size: 18px
+		margin-left: 40px
+		margin-bottom: 30px
+		+l_l
+.map__info_title
+	font-size: 28px
+	margin-left: 40px
+	margin-bottom: 20px
+	+l_l
