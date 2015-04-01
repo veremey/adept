@@ -262,11 +262,14 @@
 		left: 0px
 		+arr(8, 16, #fff ,r)
 
-
+.partner
+	margin-bottom: 60px
 .partner__item
 	width: 615px
+	height: 440px
 	float: left
 	background-color: #FFF
+	overflow: hidden
 	.btn
 		position: relative
 		float: right
@@ -315,6 +318,49 @@
 	overflow: hidden
 	img
 		height: 440px
+	&:hover
+		.partner__container
+			background-color: $red
+			&:before
+				border-color: transparent transparent $red  transparent
+	&:active
+		.partner__container
+			background-color: #8f0002
+			&:before
+				border-color: transparent transparent #8f0002 transparent
+.partner__container
+	position: absolute
+	bottom: 20px
+	left: 30px
+	width: 210px
+	height: 38px
+	padding: 0px 0px 30px 30px
+	color: #FFF
+	background-color: rgba(169, 0, 1, .71)//  цвет такй же как и с 339
+	p
+		margin-right: 30px
+		font-size: 25px
+		line-height: 25px
+		+l_l
+	&:before
+		content: ""
+		position: absolute
+		top: -58px
+		right: 0px
+		width: 185px
+		height: 0px
+		border-style: solid
+		border-width: 0px 55px 58px 0px
+		border-color: transparent transparent rgba(169, 0, 1, 0.71) transparent //  цвет такй же как и с 329
+	&:after
+		content: ""
+		position: absolute
+		top: -15px
+		left: 30px
+		width: 18px
+		height: 1px
+		background: #FFF
+
 
 .award
 	width: 50%
@@ -332,6 +378,7 @@
 			margin: 45px 0 10px
 	&__wrap
 		width: 100%
+		float: right
 		background-color: #F1EFEF
 		+clr
 		&_link
@@ -349,6 +396,64 @@
 				border-right: 1px solid #fff
 			img
 				+vcenter
+.coin
+	position: relative
+	height: 129px
+	&:before
+		content: ""
+		position: absolute
+		top: 30px
+		right: 0
+		+s(coin_bg)
+.diploma
+	position: relative
+	height: 145px
+	&:before
+		content: ""
+		position: absolute
+		top: 30px
+		right: 0
+		+s(diploma_bg)
 
-
-
+.client
+	width: 500px
+	float: left
+	font-size: 28px
+	+l_l
+.pager
+	float: right
+	width: 80px
+	margin-bottom: 30px
+	a
+		display: inline-block
+		position: relative
+		background-color: #fff
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		border: 1px solid #ded8d7
+		&:before
+			content: ""
+			+vcenter
+		&:hover
+			background-color: #AA0002
+		&:active
+			background-color: #9b0002
+.page__back
+	&:before
+		+s(bird_l)
+	&:hover
+		&:before
+			+s(bird_lh)
+	&:active
+		&:before
+			+s(bird_lh)
+.page__next
+	&:before
+		+s(bird)
+	&:hover
+		&:before
+			+s(bird_h)
+	&:active
+		&:before
+			+s(bird_h)
