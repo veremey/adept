@@ -4,7 +4,7 @@
 
 .slider
 	position: relative
-	margin: 0 0 75px
+	margin: 0 0 72px
 	float: left
 	min-width: 100%
 	height: 545px
@@ -75,10 +75,11 @@
 	display: inline-block
 	color: #FFF
 	margin-bottom: 6px
-	padding: 5px 5px 5px 10px
+	line-height: 33px
+	padding: 0 5px
 	background-color: $red
 	font-size: 24px
-	// +bsp
+	+bsp
 	+r(320)
 		font-size: 18px
 	&:after
@@ -165,6 +166,15 @@
 				+arr(8, 16, $red ,r)
 				+r(320)
 					display: none
+	&:active
+		+r(320)
+			h3
+				background-color: #D6D3D3
+				-webkit-transition: all 0s ease-in
+				-moz-transition: all 0s ease-in
+				-o-transition: all 0s ease-in
+				-ms-transition: all 0s ease-in
+				transition: all 0s ease-in
 .top__cut
 	+r(768)
 		top: 275px
@@ -280,8 +290,9 @@
 	+clr
 .good__item_title
 	color: $red
-	margin: 45px 60px 25px 40px //del
+	margin: 40px 60px 20px 40px //del
 	font-size: 16px
+	line-height: 24px
 	text-transform: uppercase
 	-webkit-transition: all 0.4s ease-in-out 0.2s
 	-moz-transition: all 0.4s ease-in-out 0.2s
@@ -297,8 +308,9 @@
 		line-height: 109px
 .good__item_content
 	font-size: 16px
+	line-height: 24px
 	color: $text
-	margin: 0 39px
+	margin: 0 42px
 	-webkit-hyphens: auto
 	-moz-hyphens: auto
 	hyphens: auto
@@ -307,8 +319,8 @@
 		display: none
 .good__more
 	position: absolute
-	bottom: 30px
-	right: 30px
+	bottom: 24px
+	right: 22px
 	width: 45px
 	height: 45px
 	border-radius: 50%
@@ -381,7 +393,7 @@
 		color: #191919
 		border: 1px solid #E9E5E4
 		padding-left: 40px
-		margin-right: 93px
+		margin-right: 100px
 		+l_black
 		+r(320)
 			width: 200px
@@ -401,6 +413,7 @@
 			border-color: #dbd7d6
 	+clr
 .partner__item_wrap
+	margin-bottom: 17px
 	+clr
 .partner__col
 	width: 230px
@@ -416,10 +429,13 @@
 			margin-left: 20px
 	p
 		font-size: 16px
+		line-height: 24px
 		color: $text
 		+os
 .partner__title
 	font-size: 26px
+	line-height: 30px
+	margin-bottom: 30px
 	color: #191919
 	+l_l
 .partner__item_img
@@ -447,17 +463,17 @@
 				border-color: transparent transparent #8f0002 transparent
 .partner__container
 	position: absolute
-	bottom: 20px
-	left: 30px
-	width: 210px
-	height: 38px
-	padding: 0px 0px 30px 30px
+	bottom: 30px
+	left: 32px
+	width: 213px
+	height: 70px
+	padding: 0px 0px 25px 30px
 	color: #FFF
 	background-color: rgba(169, 0, 1, .71)//  цвет такй же как и с 339
 	p
 		margin-right: 30px
 		font-size: 25px
-		line-height: 25px
+		line-height: 37px
 		+l_l
 	&:before
 		content: ""
@@ -467,14 +483,14 @@
 		width: 185px
 		height: 0px
 		border-style: solid
-		border-width: 0px 55px 58px 0px
+		border-width: 0px 58px 58px 0px
 		border-color: transparent transparent rgba(169, 0, 1, 0.71) transparent //  цвет такй же как и с 329
 	&:after
 		content: ""
 		position: absolute
-		top: -15px
-		left: 30px
-		width: 18px
+		top: -21px
+		left: 34px
+		width: 15px
 		height: 1px
 		background: #FFF
 
@@ -545,13 +561,14 @@
 	width: 500px
 	float: left
 	font-size: 28px
+	line-height: 28px
 	+l_l
 	+r(320)
 		width: 280px
 #pager
 	float: right
 	width: 80px
-	margin-bottom: 30px
+	margin: 0 -9px 30px 0
 	+r(320)
 		display: none
 	a
@@ -631,7 +648,12 @@
 	img
 		height: 439px
 		width: 100%
+		max-width: 100%
 	button
+		width: 155px
+		height: 41px
+		padding: 0
+		margin-left: 45px
 		background-color: $n
 		border: 1px solid #818186
 		&:hover
@@ -647,7 +669,7 @@
 	bottom: 0
 	left: 0
 	width: 430px
-	height: 215px
+	height: 190px
 	color: #FFF
 	+r(320)
 		width: 260px
@@ -659,5 +681,5 @@
 .map__info_title
 	font-size: 28px
 	margin-left: 40px
-	margin-bottom: 20px
+	margin-bottom: 12px
 	+l_l

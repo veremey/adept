@@ -52,12 +52,19 @@ $red: #aa0002
 $text: #8b8282
 $n: transparent
 
++font(PFBEAUSANSPRO-THINITAL-webfont, PFBEAUSANSPRO-THINITAL-webfont)
++font(LATO, LATO)
+
+
+
 =l_l
-	font-family: "Lato", Arial, sans-serif
+	font-family: "LATO",  Arial, sans-serif
 	font-weight: 300
-// +l_r
+=l_r
+	font-family: "LATO",  Arial, sans-serif
+	font-weight: 400
 =l_black
-	font-family: "Lato", Arial, sans-serif
+	font-family: "LATO",  Arial, sans-serif
 	font-weight: 800
 =os
 	font-family: "Open Sans", Arial, sans-serif
@@ -68,7 +75,10 @@ $n: transparent
 
 // +h8h
 
-// +bsp
+=bsp
+	font-family: "PFBEAUSANSPRO-THINITAL-webfont", sans-serif
+	font-style: italic
+	font-weight: 300
 
 body
 	font-family: "Open Sans", Arial, sans-serif
@@ -188,7 +198,7 @@ a
 		font-size: 16px
 		line-height: 35px
 		font-size: 14px
-		// +l_r
+		+l_r
 		&:hover
 			background-color: #807979
 		&:active
@@ -207,7 +217,7 @@ a
 		top: -25px
 		right: 25px
 		font-size: 16px
-		// +l_r
+		+l_r
 		+r(320)
 			top: -33px
 nav
@@ -250,7 +260,7 @@ nav
 			color: #fff
 			font-size: 16px
 			padding: 5px 3px
-			// +l_r
+			+l_r
 			&:hover
 				background-color: #544C4C
 			+max-screen(320)
@@ -337,7 +347,7 @@ nav
 		color: #fff
 		font-size: 14px
 		line-height: 25px
-		// +l_r
+		+l_r
 		&:hover
 			border-bottom: 2px solid #fff
 			// font-weight: bold
@@ -369,7 +379,7 @@ nav
 	+clr
 .social
 	float: left
-	margin-top: 42px
+	margin: 43px 0 0 43px
 	+r(768)
 		margin-left: 30px
 	a
@@ -379,16 +389,17 @@ nav
 		position: relative
 		display: block
 		padding: 5px
-		margin-right: 35px
+		margin-right: 18px
 		+r(768)
 			margin-right: 25px
+		&:after
+			content: ''
+			position: absolute
+			left: 10px
 	+clr
 .soc_f
 	&:after
-		content: ''
-		position: absolute
 		top: 5px
-		left: 10px
 		+s(f)
 	&:hover
 		&:after
@@ -398,10 +409,7 @@ nav
 			+s(f_a)
 .soc_vk
 	&:after
-		content: ''
-		position: absolute
-		top: 5px
-		left: 10px
+		top: 6px
 		+s(vk)
 	&:hover
 		&:after
@@ -411,10 +419,7 @@ nav
 			+s(vk_a)
 .soc_tw
 	&:after
-		content: ''
-		position: absolute
-		top: 5px
-		left: 10px
+		top: 7px
 		+s(tw)
 	&:hover
 		&:after
@@ -425,10 +430,38 @@ nav
 .footer__menu
 	float: right
 	display: block
-	margin: 35px 30px 0 10px
+	margin: 37px 40px 0 10px
+	+r(320)
+		display: none
 	a
 		font-size: 12px
+		padding: 10px 11px
+	li:hover
+		.submenu
+			display: none
 	+clr
+.footer nav
+	+r(320)
+		&:after
+			display: none
+.footer__nav
+	display: none
+	+r(320)
+		&:after
+			content: ""
+			position: absolute
+			bottom: 65px
+			right: 72px
+			+arr(10, 6, #fff, t)
+		.footer__menu_min
+			top: -275px
+			right: 0
+		.bt-nav
+			top: -68px
+			left: 40px
+			width: 24px
+			.line
+				left: 65%
 .footer__bottom
 	height: 130px
 	.out
