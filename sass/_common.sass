@@ -85,6 +85,7 @@ body
 	font-size: 16px
 	line-height: 1.4
 	background-color: #F9F7F7
+	// position: relative
 
 a
 	text-decoration: none
@@ -93,6 +94,7 @@ a
 	width: 1230px
 	margin: 0 auto
 	z-index: 2
+	padding: 0 10px
 	+clr
 	+r(768)
 		width: 680px
@@ -103,38 +105,55 @@ a
 		width: 265px
 
 //  HEADER
-
-
+.white__bg
+	position: absolute
+	left: 0
+	top: 0
+	width: 50%
+	height: 102px
+	background-color: #FFF
+.gray__bg
+	position: absolute
+	right: 0
+	top: 0
+	width: 50%
+	height: 102px
+	background-color: #898282
+	z-index: 1
+	+r(320)
+		height: 53px
 .header
 	position: relative
-	background-color: #FFF
 	z-index: 9999
 	+clr
 .header__white
 	float: left
+	position: relative
 	width: 920px
 	height: 100%
-	padding: 25px 0 31px
+	padding: 25px 0 32px
 	background-color: #fff
+	z-index: 9
 	+r(768)
 		width: 347px
 		padding: 15px 0
 	+r(320)
+		bottom: -65px
 		width: 280px
 		padding-right: 0px
 	+clr
-.bottom_320
-	bottom: 0
-	+r(320)
-		position: relative
-		bottom: -65px
+// .bottom_320
+// 	bottom: 0
+// 	+r(320)
+// 		position: relative
+// 		bottom: -65px
 .logo
 	display: block
 	float: left
 	+s(logo)
-	+sr(logo_ret)
 	+r(320)
 		+s(logo_320)
+		+sr(logo_ret)
 .hidetext
 	+hidetext
 
@@ -303,11 +322,13 @@ nav
 		-webkit-transition: all 0.2s ease
 		transition: all 0.2s ease
 .header__gray
+	position: relative
 	float: right
 	width: 310px
 	height: 25px
-	padding: 40px 0 30px
+	padding: 40px 0 37px
 	background-color: #898282
+	z-index: 9
 	+r(768)
 		width: 330px
 		padding: 25px 0 25px
@@ -366,16 +387,8 @@ nav
 			color: #D1CDCD
 			border-bottom: 1px solid #D1CDCD
 			// font-weight: bold
-.gray__bg
-	position: absolute
-	right: 0
-	top: 0
-	width: 50%
-	height: 100%
-	background-color: #898282
-	z-index: 1
-	+r(320)
-		height: 53px
+
+
 
 
 
@@ -394,7 +407,7 @@ nav
 	+r(768)
 		margin: 52px 0 0 30px
 	+r(320)
-		margin: 65px 0 0 58px
+		margin: 40px 0 0 20px
 	a
 		float: left
 		width: 15px
@@ -473,6 +486,7 @@ nav
 .footer__nav
 	display: none
 	+r(320)
+		display: block
 		&:after
 			content: ""
 			position: absolute
@@ -512,6 +526,7 @@ nav
 	+r(320)
 		float: left
 		margin-top: 10px
+		width: 100%
 	&:hover
 		color: #970002
 	&:active
