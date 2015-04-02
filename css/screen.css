@@ -163,9 +163,7 @@ nav ul a:hover { background-color: #544c4c; }
 .big-slider__img { position: absolute; width: 2000px; left: 50%; margin-left: -1000px; max-height: 540px; text-align: center; height: 540px; }
 .big-slider__img img { height: 540px; width: 100%; }
 
-.slider .nav { position: absolute; width: 300px; bottom: 58px; left: 50%; text-align: center; margin-left: -150px; z-index: 999; *zoom: 1; }
-@media only screen and (max-width: 768px) { .slider .nav { bottom: 40px; } }
-@media only screen and (max-width: 320px) { .slider .nav { bottom: 40px; } }
+.slider .nav { position: absolute; display: block; width: 300px; bottom: 40px; left: 50%; text-align: center; margin-left: -150px; z-index: 999; *zoom: 1; }
 .slider .nav button { width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.8; margin-left: 15px; }
 .slider .nav button:hover { -ms-transform: scale(1.2); -webkit-transform: scale(1.2); transform: scale(1.2); }
 .slider .nav .is-active { width: 14px; height: 14px; background-color: transparent; border: 1px solid #8b8282; }
