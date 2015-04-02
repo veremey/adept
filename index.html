@@ -6,9 +6,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="initial-scale=1">
-	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="format-detection" content="telephone=no"> -->
 	<!-- <meta name="viewport" content="width=1200"> -->
-	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<meta name="viewport" content="initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
@@ -16,7 +16,7 @@
 <!-- BEGIN  out-->
 <div class="header">
 	<div class="out">
-		<div class="header__white">
+		<div class="header__white bottom_320">
 			<a class="logo" href="#">
 				<h1 class="hidetext">adept consulting</h1>
 			</a>
@@ -49,7 +49,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="header__gray">
+		<div class="header__gray top_320">
 			<a class="tel" href="tel:+7 701 962 48 42" class="tel">+7 701 962 48 42</a>
 			<ul class="lang">
 				<li><a href="#">eng</a></li>
@@ -58,7 +58,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="gray__bg"></div>
+	<div class="gray__bg top_320"></div>
 </div>
 <div class="slider">
 	<ul class="cycle-slideshow"
@@ -92,8 +92,6 @@
 		</li>
 	</ul>
 	<div class="nav js-pager"></div>
-	<button class="slider__prev js-slider-prev"><i></i></button>
-	<button class="slider__next js-slider-next"><i></i></button>
 </div> <!-- END SLIDER -->
 <div class="clear"></div>
 <!-- SERVICE -->
@@ -149,7 +147,7 @@
 	<a href="#" class="good bottom__cut_small">
 		<div class="good__item ">
 			<h3 class="good__item_title">
-				Курсы корейского языка
+				Курсы корейского  языка
 			</h3>
 			<p class="good__item_content">Грамотные преподаватели, поездка мечты в Корею</p>
 			<span class="good__more"></span>
@@ -233,7 +231,7 @@
 	</ul> <!-- SLIDESHOW -->
 </div>
 <div class="map out">
-	<img src="img/map.png" srcset="img/map_768.png" 768w,  alt="">
+	<img src="img/map.png" srcset="img/map_768.png 768w, img/map_320.png 320w"  alt="">
 	<div class="map__info">
 		<h3 class="map__info_title">Наш адрес</h3>
 		<p>Казахтан, г.Алматы, пр.Сейфуллина 531</p>

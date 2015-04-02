@@ -38,11 +38,15 @@
 .slider .nav
 	position: absolute
 	width: 300px
-	bottom: 8px
+	bottom: 58px
 	left: 50%
 	text-align: center
 	margin-left: -150px
 	z-index: 999
+	+r(768)
+		bottom: 40px
+	+r(320)
+		bottom: 40px
 	button
 		width: 12px
 		height: 12px
@@ -67,6 +71,8 @@
 	// +h8h
 	+r(768)
 		font-size: 78px
+	+r(320)
+		font-size: 30px
 .slider__content
 	position: relative
 	display: inline-block
@@ -76,6 +82,8 @@
 	background-color: $red
 	font-size: 24px
 	// +bsp
+	+r(320)
+		font-size: 18px
 	&:after
 		content: ""
 		position: absolute
@@ -116,6 +124,13 @@
 			-o-transition: all 0.4s ease-in
 			-ms-transition: all 0.4s ease-in
 			transition: all 0.4s ease-in
+			+r(320)
+				opacity: 1
+				-webkit-transform: scale(1) rotate(0deg)
+				-moz-transform: scale(1) rotate(0deg)
+				-o-transform: scale(1) rotate(0deg)
+				-ms-transform: scale(1) rotate(0deg)
+				transform: scale(1) rotate(0deg)
 		.mask
 			opacity: 1
 			-webkit-transform: scale(-1) rotate(-180deg)
@@ -131,6 +146,8 @@
 			-webkit-border-radius: 0px
 			-moz-border-radius: 0px
 			border-radius: 0px
+			+r(320)
+				display: none
 		.good__img
 			&:after
 				-webkit-transition: all 0.6s ease-in
@@ -139,6 +156,8 @@
 				-ms-transition: all 0.6s ease-in
 				transition: all 0.6s ease-in
 				+arr(8, 16, $red ,l)
+				+r(320)
+					display: none
 		.mask + .good__img
 			&:after
 				-webkit-transition: all 0.6s ease-in
@@ -147,9 +166,15 @@
 				-ms-transition: all 0.6s ease-in
 				transition: all 0.6s ease-in
 				+arr(8, 16, $red ,r)
+				+r(320)
+					display: none
 .top__cut
 	+r(768)
 		top: 275px
+		&:after
+			display: none
+	+r(320)
+		top: 0
 		&:after
 			display: none
 	&:after
@@ -177,10 +202,17 @@
 			border-style: solid
 			border-width: 0 61px 72px 0
 			border-color: transparent #f9f7f7 transparent transparent
+	+r(320)
+		&:after
+			display: none
 
 .bottom__cut
 	+r(768)
 		top: -275px
+		&:after
+			display: none
+	+r(320)
+		top: 0
 		&:after
 			display: none
 	&:after
@@ -208,6 +240,9 @@
 			border-style: solid
 			border-width: 72px 0 0 61px
 			border-color: transparent transparent transparent #f9f7f7
+	+r(320)
+		&:after
+			display: none
 .good__img
 	position: relative
 	float: left
@@ -216,6 +251,8 @@
 	+r(768)
 		max-width: 50%
 		width: 343px
+	+r(320)
+		display: none
 	img
 		height: 275px
 		+r(768)
@@ -239,6 +276,10 @@
 	background-color: #fff
 	a
 		display: block
+	+r(320)
+		width: 100%
+		height: 108px
+		border-bottom: 1px solid #f9f7f7
 	+clr
 .good__item_title
 	color: $red
@@ -252,6 +293,11 @@
 	transition: all 0.4s ease-in-out 0.2s
 	opacity: 1
 	+l_black
+	+r(320)
+		width: 100%
+		margin: auto
+		text-align: center
+		line-height: 109px
 .good__item_content
 	font-size: 16px
 	color: $text
@@ -260,6 +306,8 @@
 	-moz-hyphens: auto
 	hyphens: auto
 	+os
+	+r(320)
+		display: none
 .good__more
 	position: absolute
 	bottom: 30px
@@ -268,6 +316,8 @@
 	height: 45px
 	border-radius: 50%
 	background-color: #f1efef
+	+r(320)
+		display: none
 	&:after
 		content: ""
 		position: absolute
@@ -286,6 +336,8 @@
 	background-color: $red
 	color: #FFF
 	opacity: 0
+	+r(320)
+		display: none
 	p
 		margin: 39px
 		font-size: 14px
@@ -322,6 +374,8 @@
 	overflow: hidden
 	+r(768)
 		width: 680px
+	+r(320)
+		width: 265px
 	.btn
 		position: relative
 		float: right
@@ -332,6 +386,10 @@
 		padding-left: 40px
 		margin-right: 93px
 		+l_black
+		+r(320)
+			width: 200px
+			margin-left: 30px
+			float: none
 		&:after
 			content: ""
 			position: absolute
@@ -351,8 +409,14 @@
 	width: 230px
 	float: left
 	margin: 45px 50px 0 15px
+	+r(320)
+		margin: 40px 20px 40px 20px
+		&:last-child
+			display: none
 	&:first-child
 		margin-left: 40px
+		+r(320)
+			margin-left: 20px
 	p
 		font-size: 16px
 		color: $text
@@ -369,6 +433,8 @@
 	overflow: hidden
 	+r(768)
 		width: 50%
+	+r(320)
+		display: none
 	img
 		height: 440px
 		width: 100%
@@ -422,6 +488,8 @@
 	float: right
 	background-color: #F1EFEF
 	+clr
+	+r(320)
+		width: 100%
 	&__title
 		font-size: 28px
 		+l_l
@@ -450,6 +518,8 @@
 			margin-left: -1px
 			+r(768)
 				width: 169px
+			+r(320)
+				width: 132px
 			&:nth-child(even)
 				margin-left: 0
 				border-right: 1px solid #fff
@@ -479,10 +549,14 @@
 	float: left
 	font-size: 28px
 	+l_l
+	+r(320)
+		width: 280px
 #pager
 	float: right
 	width: 80px
 	margin-bottom: 30px
+	+r(320)
+		display: none
 	a
 		display: inline-block
 		position: relative
@@ -554,6 +628,9 @@
 		border-style: solid
 		border-width: 0 0 73px 77px
 		border-color: transparent transparent #fff transparent
+	+r(320)
+		&:after
+			display: none
 	img
 		height: 439px
 		width: 100%
@@ -575,6 +652,8 @@
 	width: 430px
 	height: 215px
 	color: #FFF
+	+r(320)
+		width: 260px
 	p
 		font-size: 18px
 		margin-left: 40px
