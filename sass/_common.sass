@@ -53,18 +53,18 @@ $text: #8b8282
 $n: transparent
 
 +font(PFBEAUSANSPRO-THINITAL-webfont, PFBEAUSANSPRO-THINITAL-webfont)
-+font(LATO, LATO)
++font(Lato-Light, Lato-Light)
 
 
 
 =l_l
-	font-family: "LATO",  Arial, sans-serif
+	font-family: "Lato-Light",  Arial, sans-serif
 	font-weight: 300
 =l_r
-	font-family: "LATO",  Arial, sans-serif
+	font-family: "Lato-Light",  Arial, sans-serif
 	font-weight: 400
 =l_black
-	font-family: "LATO",  Arial, sans-serif
+	font-family: "Lato-Light",  Arial, sans-serif
 	font-weight: 800
 =os
 	font-family: "Open Sans", Arial, sans-serif
@@ -114,25 +114,25 @@ a
 	float: left
 	width: 920px
 	height: 100%
-	padding: 25px 0
+	padding: 25px 0 31px
 	background-color: #fff
 	+r(768)
-		width: 385px
+		width: 347px
+		padding: 15px 0
 	+r(320)
 		width: 280px
-		padding-right: 20px
+		padding-right: 0px
 	+clr
 .bottom_320
 	bottom: 0
 	+r(320)
 		position: relative
-		bottom: -94px
+		bottom: -65px
 .logo
 	display: block
 	float: left
 	+s(logo)
-	+r(640)
-		+s(logo_ret)
+	+sr(logo_ret)
 	+r(320)
 		+s(logo_320)
 .hidetext
@@ -212,6 +212,7 @@ a
 	margin-top: 35px
 	+r(768)
 		display: block
+		margin-right: 5px
 	> span
 		position: absolute
 		top: -25px
@@ -308,7 +309,10 @@ nav
 	padding: 40px 0 30px
 	background-color: #898282
 	+r(768)
-		width: 295px
+		width: 330px
+		padding: 25px 0 25px
+	+r(320)
+		padding: 36px 0 13px
 	+clr
 .top_320
 	top: 0
@@ -324,14 +328,21 @@ nav
 	font-size: 14px
 	line-height: 25px
 	+l_black
+	+r(320)
+		margin-left: 80px
 	&:before
 		content: ""
 		position: absolute
 		top: 4px
 		left: -25px
 		+s(tel)
+		+sr(tel_r)
 .lang
 	float: right
+	+r(768)
+		margin-right: 20px
+	+r(320)
+		margin-right: 5px
 	+clr
 	li
 		display: inline-block
@@ -364,7 +375,7 @@ nav
 	background-color: #898282
 	z-index: 1
 	+r(320)
-		height: 94px
+		height: 53px
 
 
 
@@ -381,7 +392,9 @@ nav
 	float: left
 	margin: 43px 0 0 43px
 	+r(768)
-		margin-left: 30px
+		margin: 52px 0 0 30px
+	+r(320)
+		margin: 65px 0 0 58px
 	a
 		float: left
 		width: 15px
@@ -401,41 +414,54 @@ nav
 	&:after
 		top: 5px
 		+s(f)
+		+sr(f_r)
 	&:hover
 		&:after
 			+s(f_h)
+			+sr(f_hr)
 	&:active
 		&:after
 			+s(f_a)
+			+sr(f_ar)
 .soc_vk
 	&:after
 		top: 6px
 		+s(vk)
+		+sr(vk_r)
 	&:hover
 		&:after
 			+s(vk_h)
+			+sr(vk_hr)
 	&:active
 		&:after
 			+s(vk_a)
+			+sr(vk_ar)
 .soc_tw
 	&:after
 		top: 7px
 		+s(tw)
+		+sr(tw_r)
 	&:hover
 		&:after
 			+s(tw_h)
+			+sr(tw_hr)
 	&:active
 		&:after
 			+s(tw_a)
+			+sr(tw_ar)
 .footer__menu
 	float: right
 	display: block
 	margin: 37px 40px 0 10px
+	+r(768)
+		margin-top: 45px
 	+r(320)
 		display: none
 	a
 		font-size: 12px
 		padding: 10px 11px
+		+r(768)
+			padding: 10px 6px
 	li:hover
 		.submenu
 			display: none
@@ -472,13 +498,20 @@ nav
 	+clr
 .copy
 	float: left
+	width: 50%
 	margin-top: 52px
+	p
+		float: left
+		margin-right: 5px
 .made
 	float: right
 	color: #a09998
 	font-size: 12px
 	line-height: 20px
 	margin-top: 52px
+	+r(320)
+		float: left
+		margin-top: 10px
 	&:hover
 		color: #970002
 	&:active
