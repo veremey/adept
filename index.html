@@ -3,13 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>Template</title>
-<!-- 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'> -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	<meta name="viewport" content="initial-scale=1">
-	<!-- <meta name="format-detection" content="telephone=no"> -->
-	<!-- <meta name="viewport" content="width=1200"> -->
-	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="icon" type="image/png" href="img/favicon.png">
 	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<meta name="viewport" content="initial-scale=1">
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
@@ -19,7 +16,7 @@
 <div class="header out">
 		<div class="header__white bottom_320">
 			<a class="logo" href="#">
-				<h1 class="hidetext">adept consulting</h1>
+				<h1>adept consulting</h1>
 			</a>
 			<ul class="menu">
 				<li><a href="#" class="menu__link">О компании</a></li>
@@ -62,6 +59,7 @@
 	<!-- <div class="gray__bg top_320"></div> -->
 
 </div>
+<!-- SLIDER -->
 <div class="slider">
 	<ul class="cycle-slideshow"
 		data-cycle-fx="scrollHorz"
@@ -73,7 +71,7 @@
 		data-cycle-prev=".js-slider-prev"
 		data-cycle-next=".js-slider-next">
 		<li class="big-slider__item js-big-slider-item">
-			<div class="big-slider__img">
+			<div >
 				<picture>
 					<!--[if IE 9]><video style="display: none;"><![endif]-->
 					<source srcset="img/big.png" media="(min-width: 1024px)">
@@ -84,15 +82,14 @@
 					<img srcset="img/big.png" alt="img">
 				</picture>
 			</div>
-			<div class="out">
-				<h2 class="slider__title">Консалтинговые услуги</h2>
-				<p class="slider__content">Достигнем результата вместе, расширяя</p><br>
-				<p class="slider__content">горизонты возможностей</p>
+			<div class="out slider__content">
+				<h2 >Консалтинговые услуги</h2>
+				<p ><em>Достигнем результата вместе, расширяя</em></p><br>
+				<p ><em>горизонты возможностей</em></p>
 			</div>
 		</li>
 		<li class="big-slider__item js-big-slider-item">
-			<div class="big-slider__img gray">
-				<div class="big-slider__img">
+			<div class=" gray">
 					<picture>
 						<!--[if IE 9]><video style="display: none;"><![endif]-->
 						<source srcset="img/big.png" media="(min-width: 1024px)">
@@ -102,16 +99,15 @@
 						<!--[if IE 9]></video><![endif]-->
 						<img srcset="img/big.png" alt="img">
 					</picture>
-				</div>
 			</div>
-			<div class="out">
-				<h2 class="slider__title">Консалтинговые услуги</h2>
-				<p class="slider__content">Достигнем результата вместе, расширяя</p><br>
-				<p class="slider__content">горизонты возможностей</p>
+			<div class="out slider__content">
+				<h2 >Консалтинговые услуги</h2>
+				<p ><em>Достигнем результата вместе, расширяя</em></p><br>
+				<p ><em>горизонты возможностей</em></p>
 			</div>
 		</li>
 	</ul>
-	<div class="nav js-pager"></div>
+	<div class="nav_page js-pager"></div>
 </div> <!-- END SLIDER -->
 <div class="clear"></div>
 <!-- SERVICE -->
@@ -121,11 +117,11 @@
 			<img src="img/ur.png" alt="">
 		</div>
 		<div class="good__item">
-			<h3 class="good__item_title">
+			<h3 >
 				Юридические услуги
 			</h3>
-			<p class="good__item_content">Все виды юридических услуг для вашего бизнеса</p>
-			<span class="good__more"></span>
+			<p >Все виды юридических услуг для вашего бизнеса</p>
+			<span ></span>
 		</div>
 		<div class="mask">
 			<p>Создание договорной базы по предприятию; Структурирование и сопровождение сделок по приобретению активов и многое другое...</p>
@@ -137,11 +133,11 @@
 			<img class="gray" src="img/earth.png" alt="">
 		</div>
 		<div class="good__item">
-			<h3 class="good__item_title">
+			<h3 >
 				Переводческие услуги
 			</h3>
-			<p class="good__item_content">Перевод текстов на более, чем 50 языков</p>
-			<span class="good__more"></span>
+			<p >Перевод текстов на более, чем 50 языков</p>
+			<span ></span>
 		</div>
 		<div class="mask">
 			<p>Создание договорной базы по предприятию; Структурирование и сопровождение сделок по приобретению активов и многое другое...</p>
@@ -150,11 +146,11 @@
 	</a>
 	<a href="#" class="good bottom__cut">
 		<div class="good__item ">
-			<h3 class="good__item_title">
+			<h3>
 				Бухгалтерские услуги
 			</h3>
-			<p class="good__item_content">Профессиональное бухгалтерское обслуживание</p>
-			<span class="good__more"></span>
+			<p >Профессиональное бухгалтерское обслуживание</p>
+			<span ></span>
 		</div>
 		<div class="mask take__left">
 			<p>Создание договорной базы по предприятию; Структурирование и сопровождение сделок по приобретению активов и многое другое...</p>
@@ -166,11 +162,11 @@
 	</a>
 	<a href="#" class="good bottom__cut_small">
 		<div class="good__item ">
-			<h3 class="good__item_title">
+			<h3 >
 				Курсы корейского  языка
 			</h3>
-			<p class="good__item_content">Грамотные преподаватели, поездка мечты в Корею</p>
-			<span class="good__more"></span>
+			<p >Грамотные преподаватели, поездка мечты в Корею</p>
+			<span ></span>
 		</div>
 		<div class="mask take__left">
 			<p>Создание договорной базы по предприятию; Структурирование и сопровождение сделок по приобретению активов и многое другое...</p>
@@ -186,8 +182,7 @@
 	<div class="partner__item">
 		<div class="partner__item_wrap">
 			<div class="partner__col">
-				<h3 class="partner__title">Adept Consulting - теплый прием  и плодотворное сотрудничество
-				</h3>
+				<h3>Adept Consulting - теплый прием  и плодотворное сотрудничество</h3>
 				<p>
 				В нашей команде – специалисты, которые любят и знают свою работу! Кроме этого, в нашем штате есть профессиональные тренеры и коуч.
 				</p>
@@ -213,13 +208,13 @@
 				<h3 class="award__title">Наши награды</h3>
 			</div>
 			<div class="award__wrap">
-				<a href="#" class="award__wrap_link coin">
+				<a href="#" class="coin">
 					<img  class="gray_half" src="img/img1.png" alt=""></a>
-				<a href="#" class="award__wrap_link coin">
+				<a href="#" class="coin">
 					<img  class="gray_half" src="img/img2.png" alt=""></a>
-				<a href="#" class="award__wrap_link diploma">
+				<a href="#" class="diploma">
 					<img class="gray_half"  src="img/img3.png" alt=""></a>
-				<a href="#" class="award__wrap_link diploma">
+				<a href="#" class="diploma">
 					<img class="gray_half"  src="img/img4.png" alt=""></a>
 			</div>
 		</div>
@@ -233,7 +228,7 @@
 		<a class="page__next" href="#"></a>
 	</div>
 	<div class="clear"></div>
-	<ul class="cycle-slideshow"
+	<ul class="cycle-slideshow "
 		data-cycle-fx="carousel"
 		data-cycle-slides=".client__slide"
 		data-cycle-timeout="2000"
@@ -261,11 +256,12 @@
 		<img srcset="img/map.png" alt="img">
 	</picture>
 	<div class="map__info">
-		<h3 class="map__info_title">Наш адрес</h3>
+		<h3 >Наш адрес</h3>
 		<p>Казахтан, г.Алматы, пр.Сейфуллина 531</p>
 		<button class="btn">все контакты</button>
 	</div>
 </div>
+
 <div class="footer">
 	<div class="out footer__top">
 		<div class="social">
@@ -287,28 +283,26 @@
 			<li><a href="#" class="menu__link">Контакты</a></li>
 		</ul>
 		<div class="footer__nav nav">
-				<nav>
-					<ul class="footer__menu_min">
-						<li><a href="#">О компании</a></li>
-						<li><a href="#">Услуги</a></li>
-						<li><a href="#">Курсы</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-				</nav>
-				<div class="bt-nav">
-					<div class="line line1"></div>
-					<div class="line line2"></div>
-					<div class="line line3"></div>
-				</div>
+			<nav>
+				<ul class="footer__menu_min">
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Курсы</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="bt-nav">
+				<div class="line line1"></div>
+				<div class="line line2"></div>
+				<div class="line line3"></div>
 			</div>
-	</div>
-	<div class="footer__bottom">
-		<div class="out">
-			<div class="copy">
-				<p>© 2010 - 2015 ADEPT CONSULTING.</p> <p>Все права защищены.</p>
-			</div>
-			<a href="#" class="made">Дизайн сайта</a>
 		</div>
+	</div>
+	<div class="footer__bottom out">
+		<div class="copy">
+			<p>© 2010 - 2015 ADEPT CONSULTING.</p> <p>Все права защищены.</p>
+		</div>
+		<a href="#" class="made">Дизайн сайта</a>
 	</div>
 </div>
 <!-- END out-->

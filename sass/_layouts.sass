@@ -12,7 +12,8 @@
 		height: 460px
 		margin-bottom: 55px
 	+r(320)
-		margin-bottom: 30px
+		height: 310px
+		margin-bottom: 35px
 	+clr
 
 .slider .cycle-slideshow
@@ -20,6 +21,8 @@
 	overflow: hidden
 	+r(768)
 		height: 460px
+	+r(320)
+		height: 310px
 .big-slider__item
 	position: static
 	top: 0
@@ -30,18 +33,17 @@
 	visibility: hidden
 	display: block
 	height: 540px
-.big-slider__img
-	position: absolute // delate
-	top: 0
-	left: 0
-	right: 0
-	max-height: 540px
-	text-align: center
-	height: 540px
-	img
+	div
+		position: absolute // .big-slider__img
+		top: 0
+		left: 0
+		right: 0
+		max-height: 540px
 		height: 540px
-		width: 100%
-.slider .nav
+		img
+			height: 540px
+			width: 100%
+.nav_page
 	position: absolute
 	display: block
 	width: 300px
@@ -50,6 +52,8 @@
 	text-align: center
 	margin-left: -150px
 	z-index: 999
+	+r(320)
+		bottom: 20px
 	button
 		width: 12px
 		height: 12px
@@ -67,38 +71,44 @@
 		&:hover
 			+scale(1)
 	+clr
-.slider__title
-	font-size: 101px
-	color: #FFF
-	margin: 90px 0 50px
-	// +h8h
-	+r(768)
-		font-size: 78px
-	+r(320)
-		font-size: 30px
 .slider__content
-	position: relative
-	display: inline-block
-	color: #FFF
-	margin-bottom: 6px
-	line-height: 33px
-	padding: 0 5px
-	background-color: $red
-	font-size: 24px
-	+bsp
-	+r(320)
-		font-size: 18px
-	&:after
-		content: ""
-		position: absolute
-		right: -8px
-		top: 0
-		bottom: 0
-		width: 0
-		height: 0
-		border-style: solid
-		border-width: 32px 8px 0 0
-		border-color: $red transparent transparent transparent
+	h2
+		font-size: 101px //.slider__title
+		color: #FFF
+		line-height: 104px
+		margin: 85px 0 60px
+		+h8h
+		+r(768)
+			font-size: 78px
+			line-height: 85px
+			margin: 79px 0 45px
+		+r(320)
+			font-size: 30px
+			line-height: 30px
+			margin: 62px 0 30px
+	p
+		position: relative //.slider__content
+		display: inline-block
+		color: #FFF
+		margin-bottom: 6px
+		line-height: 33px
+		padding: 0 10px
+		background-color: $red
+		font-size: 24px
+		+bsp
+		+r(320)
+			font-size: 18px
+		&:after
+			content: ""
+			position: absolute
+			right: -8px
+			top: 0
+			bottom: 0
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 32px 8px 0 0
+			border-color: $red transparent transparent transparent
 
 .service
 	margin-bottom: 70px
@@ -296,50 +306,52 @@
 		height: 108px
 		border-bottom: 1px solid #f9f7f7
 	+clr
-.good__item_title
-	color: $red
-	margin: 40px 60px 20px 40px //del
-	font-size: 16px
-	line-height: 24px
-	text-transform: uppercase
-	-webkit-transition: all 0.4s ease-in-out 0.2s
-	-moz-transition: all 0.4s ease-in-out 0.2s
-	-o-transition: all 0.4s ease-in-out 0.2s
-	-ms-transition: all 0.4s ease-in-out 0.2s
-	transition: all 0.4s ease-in-out 0.2s
-	opacity: 1
-	+l_black
-	+r(320)
-		margin: 30px 20px 0 30px
-		line-height: 27px
-.good__item_content
-	font-size: 16px
-	line-height: 24px
-	color: $text
-	margin: 0 42px
-	-webkit-hyphens: auto
-	-moz-hyphens: auto
-	hyphens: auto
-	+os
-	+r(320)
-		display: none
-.good__more
-	position: absolute
-	bottom: 24px
-	right: 22px
-	width: 45px
-	height: 45px
-	border-radius: 50%
-	background-color: #f1efef
-	+r(320)
-		display: none
-	&:after
-		content: ""
-		position: absolute
-		top: 50%
-		left: 50%
-		margin: -3px 0 0 -3px
-		+s(bird)
+	h3
+		color: $red //.good__item_title
+		margin: 40px 60px 20px 40px //del
+		font-size: 16px
+		line-height: 24px
+		text-transform: uppercase
+		-webkit-transition: all 0.4s ease-in-out 0.2s
+		-moz-transition: all 0.4s ease-in-out 0.2s
+		-o-transition: all 0.4s ease-in-out 0.2s
+		-ms-transition: all 0.4s ease-in-out 0.2s
+		transition: all 0.4s ease-in-out 0.2s
+		opacity: 1
+		+l_black
+		+r(768)
+			margin-right: 85px
+		+r(320)
+			margin: 30px 20px 0 30px
+			line-height: 27px
+	p
+		font-size: 16px//.good__item_content
+		line-height: 24px
+		color: $text
+		margin: 0 42px
+		-webkit-hyphens: auto
+		-moz-hyphens: auto
+		hyphens: auto
+		+os
+		+r(320)
+			display: none
+	span
+		position: absolute//.good__more
+		bottom: 24px
+		right: 22px
+		width: 45px
+		height: 45px
+		border-radius: 50%
+		background-color: #f1efef
+		+r(320)
+			display: none
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -3px 0 0 -3px
+			+s(bird)
 
 .mask
 	position: absolute
@@ -425,20 +437,27 @@
 	+r(768)
 		margin-top: 35px
 .partner__item_wrap
-	margin-bottom: 17px
+	margin-bottom: 5px
 	+r(768)
 		margin-bottom: 0
 	+clr
 .partner__col
 	width: 230px
 	float: left
-	margin: 45px 50px 0 15px
+	margin: 45px 40px 0 35px
+	+r(768)
+		width: 261px
+		margin-right: 39px
 	+r(320)
 		margin: 40px 20px 40px 20px
 		&:last-child
 			display: none
 	&:first-child
 		margin-left: 40px
+		margin-top: 40px
+		+r(768)
+			margin-left: 44px
+			margin-top: 50px
 		+r(320)
 			margin-left: 20px
 	p
@@ -448,12 +467,12 @@
 		+os
 		+r(768)
 			line-height: 23px
-.partner__title
-	font-size: 26px
-	line-height: 34px
-	margin-bottom: 30px
-	color: #191919
-	+l_l
+	h3
+		font-size: 26px
+		line-height: 34px
+		margin-bottom: 30px
+		color: #191919
+		+l_l
 .partner__item_img
 	float: left
 	position: relative
@@ -481,9 +500,9 @@
 	position: absolute
 	bottom: 30px
 	left: 32px
-	width: 213px
+	width: 236px
 	height: 70px
-	padding: 0px 0px 25px 30px
+	padding: 0px 0px 25px 38px
 	color: #FFF
 	background-color: rgba(169, 0, 1, .71)//  цвет такй же как и с 339
 	p
@@ -496,16 +515,16 @@
 		position: absolute
 		top: -58px
 		right: 0px
-		width: 185px
+		width: 207px
 		height: 0px
 		border-style: solid
-		border-width: 0px 58px 58px 0px
+		border-width: 0px 67px 58px 0px
 		border-color: transparent transparent rgba(169, 0, 1, 0.71) transparent //  цвет такй же как и с 329
 	&:after
 		content: ""
 		position: absolute
-		top: -21px
-		left: 34px
+		top: -18px
+		left: 38px
 		width: 15px
 		height: 1px
 		background: #FFF
@@ -519,7 +538,7 @@
 	+clr
 	+r(320)
 		width: 100%
-	&__title
+	h3
 		font-size: 28px
 		+l_l
 	&__cup
@@ -535,8 +554,8 @@
 		float: right
 		background-color: #F1EFEF
 		+clr
-		&_link
-			position: relative
+		a
+			position: relative//&_link
 			float: left
 			width: 153px
 			height: 142px
@@ -561,9 +580,12 @@
 		content: ""
 		position: absolute
 		top: 30px
-		right: 0
+		right: 20px
 		+s(coin_bg)
 		+sr(coin_bg_r)
+	+r(768)
+		&:before
+			top: 41px
 .diploma
 	position: relative
 	height: 145px
@@ -574,6 +596,9 @@
 		right: 0
 		+s(diploma_bg)
 		+sr(diploma_bg_r)
+	+r(768)
+		&:before
+			right: 12px
 
 .client
 	width: 500px
@@ -642,6 +667,8 @@
 		a
 			display: block
 			height: 136px
+			+r(320)
+				height: 100px
 			img
 				position: relative
 				top: 50%
@@ -674,7 +701,7 @@
 		width: 155px
 		height: 41px
 		padding: 0
-		margin-left: 45px
+		margin-left: 52px
 		background-color: $n
 		border: 1px solid #818186
 		&:hover
@@ -696,11 +723,12 @@
 		width: 260px
 	p
 		font-size: 18px
-		margin-left: 40px
+		margin-left: 52px
 		margin-bottom: 30px
+		letter-spacing: 1px
 		+l_l
-.map__info_title
-	font-size: 28px
-	margin-left: 40px
-	margin-bottom: 12px
-	+l_l
+	h3
+		font-size: 28px
+		margin-left: 52px
+		margin-bottom: 12px
+		+l_l

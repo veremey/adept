@@ -1,51 +1,4 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)
-// =book
-// 	font-family: "book", Arial, sans-serif
-// insert pics into css
-// div
-// 	+pic("blabla.png")
-// span
-// 	+png(blabla)
-// p
-// 	+jpg(bla)
+
 
 $menu: #1d1d1d
 $red: #aa0002
@@ -53,18 +6,21 @@ $text: #8b8282
 $n: transparent
 
 +font(PFBEAUSANSPRO-THINITAL-webfont, PFBEAUSANSPRO-THINITAL-webfont)
-+font(Lato-Light, Lato-Light)
++font(LATO-REGULAR-webfont, LATO-REGULAR-webfont)
+
++font(latoLight, latoLight)
++font(Helvetica-8-Heavy, Helvetica-8-Heavy)
 
 
 
 =l_l
-	font-family: "Lato-Light",  Arial, sans-serif
+	font-family: "latoLight",  Arial, sans-serif
 	font-weight: 300
 =l_r
-	font-family: "Lato-Light",  Arial, sans-serif
+	font-family: "LATO-REGULAR-webfont",  Arial, sans-serif
 	font-weight: 400
 =l_black
-	font-family: "Lato-Light",  Arial, sans-serif
+	font-family: "LATO-REGULAR-webfont",  Arial, sans-serif
 	font-weight: 800
 =os
 	font-family: "Open Sans", Arial, sans-serif
@@ -73,11 +29,13 @@ $n: transparent
 	font-family: "Open Sans", Arial, sans-serif
 	font-weight: 300
 
-// +h8h
+=h8h
+	font-family: "Helvetica-8-Heavy", Arial, sans-serif
+	font-weight: 300
 
 =bsp
-	font-family: "PFBEAUSANSPRO-THINITAL-webfont", sans-serif
-	font-style: italic
+	font-family: "PFBEAUSANSPRO-THINITAL-webfont", Arial, sans-serif
+	font-style: normal
 	font-weight: 300
 
 body
@@ -98,9 +56,6 @@ a
 	+clr
 	+r(768)
 		width: 680px
-	// +r(640)
-	// 	width: 263px
-	// 	padding: 0 23px
 	+r(320)
 		width: 265px
 
@@ -110,14 +65,14 @@ a
 	left: 0
 	top: 0
 	width: 50%
-	height: 102px
+	height: 93px
 	background-color: #FFF
 .gray__bg
 	position: absolute
 	right: 0
 	top: 0
 	width: 50%
-	height: 102px
+	height: 93px
 	background-color: #898282
 	z-index: 1
 	+r(320)
@@ -131,22 +86,17 @@ a
 	position: relative
 	width: 920px
 	height: 100%
-	padding: 25px 0 32px
+	padding: 25px 0 23px
 	background-color: #fff
 	z-index: 9
 	+r(768)
 		width: 347px
 		padding: 15px 0
 	+r(320)
-		bottom: -65px
+		bottom: -59px
 		width: 280px
 		padding-right: 0px
 	+clr
-// .bottom_320
-// 	bottom: 0
-// 	+r(320)
-// 		position: relative
-// 		bottom: -65px
 .logo
 	display: block
 	float: left
@@ -154,7 +104,7 @@ a
 	+r(320)
 		+s(logo_320)
 		+sr(logo_ret)
-.hidetext
+h1
 	+hidetext
 
 .menu
@@ -179,6 +129,7 @@ a
 		border: 1px solid $n
 		+l_black
 		&:hover
+			color: $red
 			&:before
 				content: ""
 				border: 1px solid #ccc5c5
@@ -232,6 +183,8 @@ a
 	+r(768)
 		display: block
 		margin-right: 5px
+	+r(320)
+		margin-right: -10px
 	> span
 		position: absolute
 		top: -25px
@@ -326,21 +279,22 @@ nav
 	float: right
 	width: 310px
 	height: 25px
-	padding: 40px 0 37px
+	padding: 35px 0 28px
 	background-color: #898282
 	z-index: 9
 	+r(768)
 		width: 330px
 		padding: 25px 0 25px
 	+r(320)
+		top: -86px
 		padding: 36px 0 13px
 	+clr
-.top_320
-	top: 0
-	+r(320)
-		display: block
-		position: relative
-		top: -86px
+// .top_320
+// 	top: 0
+// 	+r(320)
+// 		display: block
+// 		position: absolute
+// 		top: -86px
 .tel
 	position: relative
 	float: left
@@ -405,7 +359,7 @@ nav
 	float: left
 	margin: 43px 0 0 43px
 	+r(768)
-		margin: 52px 0 0 30px
+		margin: 55px 0 0 30px
 	+r(320)
 		margin: 40px 0 0 20px
 	a
@@ -467,7 +421,7 @@ nav
 	display: block
 	margin: 37px 40px 0 10px
 	+r(768)
-		margin-top: 45px
+		margin-top: 49px
 	+r(320)
 		display: none
 	a
@@ -500,6 +454,8 @@ nav
 			top: -68px
 			left: 40px
 			width: 24px
+			+r(320)
+				top: 0
 			.line
 				left: 65%
 .footer__bottom
@@ -512,8 +468,15 @@ nav
 	+clr
 .copy
 	float: left
-	width: 50%
+	width: 55%
+	letter-spacing: .5px
 	margin-top: 52px
+	+r(768)
+		margin-top: 42px
+	+r(320)
+		margin-top: 25px
+		line-height: 20px
+		width: 100%
 	p
 		float: left
 		margin-right: 5px
@@ -523,6 +486,8 @@ nav
 	font-size: 12px
 	line-height: 20px
 	margin-top: 52px
+	+r(768)
+		margin-top: 42px
 	+r(320)
 		float: left
 		margin-top: 10px
