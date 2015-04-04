@@ -43,10 +43,25 @@ body
 	font-size: 16px
 	line-height: 1.4
 	background-color: #F9F7F7
+	min-width: 320px
+	// width: 1230px
+	// +r(768)
+	// 	width: 768px
+	// +r(320)
+	// 	width: 320px
 	// position: relative
 
 a
 	text-decoration: none
+.l_layout
+	margin: 0 auto
+	position: relative
+	min-height: 100%
+	max-width: 2000px
+	width: 100%
+	min-width: 320px
+	height: auto!important
+	+clr
 .out
 	position: relative
 	width: 1230px
@@ -453,9 +468,21 @@ nav
 	display: block
 	margin: 37px 40px 0 10px
 	+r(768)
-		margin-top: 49px
+		margin-top: 85px
+		ul
+			top: -250px
+		nav
+			&:after
+				display: none
 	+r(320)
-		display: none
+		width: 50px
+		margin-right: -14px
+		margin-top: 70px
+		span
+			display: none
+		ul
+			top: -285px
+
 	a
 		font-size: 12px
 		padding: 10px 11px
@@ -465,31 +492,33 @@ nav
 		.submenu
 			display: none
 	+clr
+
+
 .footer nav
 	+r(320)
 		&:after
 			display: none
-.footer__nav
-	display: none
-	+r(320)
-		display: block
-		&:after
-			content: ""
-			position: absolute
-			bottom: 65px
-			right: 72px
-			+arr(10, 6, #fff, t)
-		.footer__menu_min
-			top: -275px
-			right: 0
-		.bt-nav
-			top: -68px
-			left: 40px
-			width: 24px
-			+r(320)
-				top: 0
-			.line
-				left: 65%
+// .footer__nav
+// 	// display: none
+// 	+r(320)
+// 		display: block
+// 		&:after
+// 			content: ""
+// 			position: absolute
+// 			bottom: 65px
+// 			right: 72px
+// 			+arr(10, 6, #fff, t)
+// 		.footer__menu_min
+// 			top: -275px
+// 			right: 0
+// 		.bt-nav
+// 			top: -68px
+// 			left: 40px
+// 			width: 24px
+// 			+r(320)
+// 				top: 0
+// 			.line
+// 				left: 65%
 .footer__bottom
 	height: 130px
 	.out
