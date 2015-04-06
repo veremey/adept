@@ -71,20 +71,25 @@
 			+scale(1)
 	+clr
 .slider__content
+	padding-top: 85px
+	+r(768)
+		padding-top: 79px
+	+r(320)
+		padding-top: 62px
 	h2
 		font-size: 101px //.slider__title
 		color: #FFF
 		line-height: 104px
-		margin: 85px 0 60px
+		margin: 0px 0 60px
 		+h8h
 		+r(768)
 			font-size: 78px
 			line-height: 85px
-			margin: 79px 0 45px
+			margin: 0px 0 45px
 		+r(320)
 			font-size: 30px
 			line-height: 30px
-			margin: 62px 0 30px
+			margin: 0px 0 30px
 	p
 		position: relative //.slider__content
 		display: inline-block
@@ -185,13 +190,12 @@
 					display: none
 	&:active
 		+r(320)
-			h3
-				background-color: #D6D3D3
-				-webkit-transition: all 0s ease-in
-				-moz-transition: all 0s ease-in
-				-o-transition: all 0s ease-in
-				-ms-transition: all 0s ease-in
-				transition: all 0s ease-in
+			background-color: #D6D3D3
+			-webkit-transition: all 0s ease-in
+			-moz-transition: all 0s ease-in
+			-o-transition: all 0s ease-in
+			-ms-transition: all 0s ease-in
+			transition: all 0s ease-in
 .top__cut
 	+r(768)
 		top: 275px
@@ -585,6 +589,11 @@
 	+r(768)
 		&:before
 			top: 41px
+	+r(320)
+		&:before
+			right: 0
+			top: 45px
+			+s(coin_bg_320)
 .diploma
 	position: relative
 	height: 145px
@@ -598,6 +607,11 @@
 	+r(768)
 		&:before
 			right: 12px
+	+r(320)
+		&:before
+			right: 0
+			top: 27px
+			+s(diploma_bg_320)
 
 .client
 	width: 500px
@@ -682,8 +696,8 @@
 	&:after
 		content: ""
 		position: absolute
-		bottom: 0
-		right: 11px
+		bottom: -1px
+		right: 10px
 		width: 0
 		height: 0
 		border-style: solid
