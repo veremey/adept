@@ -24,14 +24,11 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: LATO-REGULAR-webfont; src: url("fonts/LATO-REGULAR-webfont.eot"); src: url("fonts/LATO-REGULAR-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/LATO-REGULAR-webfont.woff2") format("woff2"), url("fonts/LATO-REGULAR-webfont.woff") format("woff"), url("fonts/LATO-REGULAR-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: latoLight; src: url("fonts/latoLight.eot"); src: url("fonts/latoLight.eot?#iefix") format("embedded-opentype"), url("fonts/latoLight.woff2") format("woff2"), url("fonts/latoLight.woff") format("woff"), url("fonts/latoLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: Helvetica-8-Heavy; src: url("fonts/Helvetica-8-Heavy.eot"); src: url("fonts/Helvetica-8-Heavy.eot?#iefix") format("embedded-opentype"), url("fonts/Helvetica-8-Heavy.woff2") format("woff2"), url("fonts/Helvetica-8-Heavy.woff") format("woff"), url("fonts/Helvetica-8-Heavy.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-body { font-family: "Open Sans", Arial, sans-serif; font-size: 16px; line-height: 1.4; background-color: #f9f7f7; }
+body { font-family: "Open Sans", Arial, sans-serif; font-size: 16px; line-height: 1.4; background-color: #f9f7f7; position: relative; min-width: 1250px; width: 100%; }
+@media only screen and (max-width: 768px) { body { min-width: 768px; } }
+@media only screen and (max-width: 320px) { body { min-width: 320px; } }
 
 a { text-decoration: none; }
-
-.layout { position: static; *zoom: 1; }
-@media screen and (min-width: 769px) and (max-width: 1268px) { .layout { position: absolute; } }
-@media screen and (min-width: 330px) and (max-width: 710px) { .layout { position: absolute; } }
-.layout:after { content: " "; display: table; clear: both; }
 
 .out { position: relative; width: 1230px; margin: 0 auto; z-index: 2; padding: 0 10px; *zoom: 1; }
 .out:after { content: " "; display: table; clear: both; }
