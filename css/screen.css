@@ -28,7 +28,9 @@ body { font-family: "Open Sans", Arial, sans-serif; font-size: 16px; line-height
 
 a { text-decoration: none; }
 
-.layout { position: relative; *zoom: 1; }
+.layout { position: static; *zoom: 1; }
+@media screen and (min-width: 769px) and (max-width: 1268px) { .layout { position: absolute; } }
+@media screen and (min-width: 330px) and (max-width: 710px) { .layout { position: absolute; } }
 .layout:after { content: " "; display: table; clear: both; }
 
 .out { position: relative; width: 1230px; margin: 0 auto; z-index: 2; padding: 0 10px; *zoom: 1; }
