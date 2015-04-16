@@ -30,7 +30,7 @@ body { font-family: "Open Sans", Arial, sans-serif; font-size: 16px; line-height
 
 a { text-decoration: none; }
 
-.out { position: relative; width: 1230px; margin: 0 auto; z-index: 2; padding: 0 10px; *zoom: 1; }
+.out { position: relative; width: 1232px; margin: 0 auto; z-index: 2; padding: 0 10px; *zoom: 1; }
 .out:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 768px) { .out { width: 680px; } }
 @media only screen and (max-width: 320px) { .out { width: 265px; } }
@@ -61,6 +61,7 @@ h1 { font: 0/0 a; text-shadow: none; color: transparent; }
 @media only screen and (max-width: 768px) { .menu span { display: block; } }
 @media only screen and (max-width: 320px) { .menu span { top: -33px; } }
 .menu li { position: relative; display: inline-block; height: 37px; }
+.menu li .is-active { color: #aa0002; }
 @media only screen and (max-width: 768px) { .menu li { display: block; } }
 .menu li:hover .submenu { display: block; }
 .menu li:hover:after { content: ""; border: 1px solid #ccc5c5; border-radius: 4px; -webkit-transform: skew(-20deg); -moz-transform: skew(-20deg); -o-transform: skew(-20deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
@@ -255,14 +256,13 @@ nav ul { position: relative; right: 0; top: 4px; padding: 0; list-style: none; }
 @media only screen and (max-width: 768px) { .bottom__cut_small:after { content: ""; display: block; position: absolute; bottom: 0; left: 0; width: 0; height: 0; border-style: solid; border-width: 72px 0 0 61px; border-color: transparent transparent transparent #f9f7f7; } }
 @media only screen and (max-width: 320px) { .bottom__cut_small:after { display: none; } }
 
-.good__img { position: relative; float: left; height: 275px; width: 308px; }
+.good__img { position: relative; float: left; height: 275px; width: 50%; }
 @media only screen and (max-width: 768px) { .good__img { max-width: 340px; width: 343px; } }
 @media only screen and (max-width: 320px) { .good__img { display: none; } }
 .good__img > img { height: 275px; width: 100%; filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale"); filter: gray; -webkit-filter: grayscale(100%); filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1); -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)"; }
 .good__img:after { content: ""; position: absolute; top: 45px; right: 0px; width: 0px; height: 0px; border-style: solid; border-width: 8px 8px 8px 0; border-color: transparent white transparent transparent; }
 
-.good__item { display: block; float: left; width: 307px; position: relative; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; vertical-align: top; height: 275px; background-color: white; *zoom: 1; }
-@media only screen and (max-width: 768px) { .good__item { width: 340px; } }
+.good__item { display: block; float: left; width: 50%; position: relative; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; vertical-align: top; height: 275px; background-color: white; *zoom: 1; }
 .good__item a { display: block; }
 @media only screen and (max-width: 320px) { .good__item { width: 100%; height: 108px; border-bottom: 1px solid #f9f7f7; } }
 .good__item:after { content: " "; display: table; clear: both; }
