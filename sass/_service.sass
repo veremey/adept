@@ -234,9 +234,26 @@
 		margin-top: 30px
 		+l_l
 	&__form
+		position: relative
 		width: 850px
 		margin: 60px auto
 		+clr
+		.btn
+			position: relative
+			margin: 55px 0 55px 280px
+			padding: 15px 50px 15px 20px
+			&:after
+				content: ""
+				position: absolute
+				top: 20px
+				right: 25px
+				+s(pointer__right)
+			&:hover
+				&:after
+					top: 19px
+					right: 27px
+					+s(pointer__down)
+					+rotate(-90)
 		&_contact
 			margin-bottom: 35px
 			+clr
@@ -275,4 +292,64 @@
 	width: 120px
 	margin-right: 10px
 .inp_mail
-	width: 170px
+	width: 181px
+.xzpl__file
+	position: relative
+	margin-top: 65px
+.upload
+	position: relative
+	width: 385px
+	height: 45px
+	opacity: 0
+	z-index: 10
+	&:hover
+		~ .file__mask .file__mask_inside
+			background-color: #f9f7f7
+.file__mask
+	position: absolute
+	top: 0
+	width: 385px
+	height: 46px
+	margin-top: 25px
+	border: 1px solid #ebe5e5
+	z-index: 1
+	p
+		float: left
+		line-height: 45px
+		margin-left: 20px
+		font-size: 16px
+		color: #191919
+		text-transform: none
+		+l_l
+	&_inside
+		height: 45px
+		width: 121px
+		top: -1px
+		border: 1px solid #d9d1d0
+		text-align: center
+		line-height: 45px
+		float: left
+		font-size: 11px
+		text-transform: uppercase
+		color: #161616
+		+l_black
+		i
+			position: absolute
+			top: 19px
+			left: 25px
+			+s(pointer__down)
+.xzpl__form_right
+	float: right
+	label
+		position: relative
+		color: #898282
+		font-size: 16px
+		+l_l
+	textarea
+		width: 400px
+		height: 115px
+		background-color: #EFEEEE
+		border: none
+		margin-top: 5px
+		padding: 20px
+	+clr
