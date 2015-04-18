@@ -103,6 +103,7 @@
 	position: relative
 	width: 100%
 	height: 163px
+	margin-bottom: 65px
 	background-image: url("../img/st_bg.png")
 	+clr
 	&__item
@@ -139,3 +140,48 @@
 		border-style: solid
 		border-width: 0 0 68px 72px
 		border-color: transparent transparent #f9f7f7 transparent
+.garant
+	background-color: #FFF
+	padding-top: 55px
+	text-align: center
+	+clr
+	h4
+		margin: 25px 0 40px
+		font-size: 28px
+		color: #161616
+		+l_l
+		span
+			color: $red
+			+l_black
+
+.star
+	display: inline-block
+	+s(mini_star)
+.garant__big
+	float: left
+	margin-left: 245px
+	+s(big_star)
+	&:first-child
+		margin-left: 140px
+	p
+		line-height: 118px
+		color: $red
+		font-size: 48px
+		+h8h
+.garant__line_top
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: -240px
+		+s(top_el)
+.garant__line_bottom
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		right: -240px
+		+rotate(180)
+		+s(top_el)
