@@ -1,0 +1,117 @@
+.job
+	position: relative
+	display: inline-block
+	width: 244px
+	padding: 40px 40px 20px 20px
+	vertical-align: top
+	background-color: #fff
+	+clr
+	&__wrap
+		margin-bottom: 70px
+	h2
+		color: $red
+		height: 45px
+		font-size: 15px
+		text-transform: uppercase
+		+l_black
+	&_type
+		margin: 40px 0
+		&_item
+			position: relative
+			font-size: 14px
+			line-height: 30px
+			+l_r
+			p
+				position: relative
+				color: #898282
+				float: left
+				background-color: #FFF
+				z-index: 2
+			i
+				position: absolute
+				bottom: 10px
+				right: 0
+				left: 0
+				border-bottom: 1px dotted #898282
+			span
+				position: relative
+				float: right
+				color: #161616
+				background-color: #fff
+				z-index: 2
+			+clr
+	.btn__transparent
+		width: 100%
+		position: relative
+		margin: 0
+		color: #191919
+		&:hover
+			background-color: darken(#fff, 20%)
+			+tr(.2s)
+		&:active
+			color: #FFF
+.job__mask
+	position: absolute
+	top: -300px
+	width: 100%
+	left: 0
+	right: 0
+	height: 325px
+	background-color: #FFFccc
+	z-index: 8
+.price__free
+	display: block
+	text-align: center
+	color: $red
+	margin-top: 10px
+	+l_r
+.pointer__down
+	position: absolute
+	top: 20px
+	left: 20px
+	+s(pointer__down)
+.pointer__buy
+	position: absolute
+	top: 18px
+	left: 60px
+	+s(pointer__buy)
+.statistics
+	position: relative
+	width: 100%
+	height: 163px
+	background-image: url("../img/st_bg.png")
+	+clr
+	&__item
+		display: inline-block
+		position: relative
+		color: #FFF
+		width: 25%
+		height: 163px
+		vertical-align: top
+		margin-right: -5px
+		border-right: 1px solid #796e6e
+		background-color: rgba(137, 137, 137, .8)
+		.statistics__in
+			line-height: 163px
+			font-size: 28px
+			margin-left: 40px
+			+l_l
+		h2
+			font-size: 48px
+			margin: 45px 0 0 40px
+			+os_ex
+		p
+			font-size: 18px
+			margin-left: 40px
+			+os_l
+.bottom__cut_right
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		right: -1px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 0 68px 72px
+		border-color: transparent transparent #f9f7f7 transparent
