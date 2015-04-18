@@ -1,21 +1,53 @@
 .job
 	position: relative
-	display: inline-block
+	display: table-cell
 	width: 244px
 	padding: 40px 40px 20px 20px
 	vertical-align: top
 	background-color: #fff
+	border-right: 1px solid #F9F7F7
 	+clr
+	&:nth-child(4n)
+		border-right: 1px solid #fff
 	&__wrap
+		display: table
 		margin-bottom: 70px
 	h2
+		display: block
 		color: $red
 		height: 45px
+		margin-bottom: 25px
 		font-size: 15px
 		text-transform: uppercase
 		+l_black
+	&__mask
+		display: none
+		position: absolute
+		top: -300px
+		width: 224px
+		height: 245px
+		padding: 40px
+		left: 0
+		right: 0
+		background-color: #FFF
+		box-shadow: 2px 5px 46px rgba(42,37,37,.19)
+		z-index: 8
 	&_type
-		margin: 40px 0
+		position: relative
+		display: block
+		margin: 0 0 40px
+		&:after
+			display: none
+			content: ""
+			position: absolute
+			top: -15px
+			left: 40px
+			z-index: 20
+			+arr(14, 7, #fff, b)
+		&:hover
+			~ .job__mask,
+			&:after
+				display: block
 		&_item
 			position: relative
 			font-size: 14px
@@ -50,15 +82,7 @@
 			+tr(.2s)
 		&:active
 			color: #FFF
-.job__mask
-	position: absolute
-	top: -300px
-	width: 100%
-	left: 0
-	right: 0
-	height: 325px
-	background-color: #FFFccc
-	z-index: 8
+
 .price__free
 	display: block
 	text-align: center
