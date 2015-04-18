@@ -154,17 +154,20 @@
 			color: $red
 			+l_black
 
+.garant__level_star
+	+clr
 .star
 	display: inline-block
 	+s(mini_star)
 .garant__big
 	float: left
-	margin-left: 245px
+	margin-left: 285px
 	+s(big_star)
 	&:first-child
 		margin-left: 140px
 	p
 		line-height: 118px
+		margin-left: 10px
 		color: $red
 		font-size: 48px
 		+h8h
@@ -185,3 +188,91 @@
 		right: -240px
 		+rotate(180)
 		+s(top_el)
+.garant__level_cont_item
+	width: 33%
+	float: left
+	p
+		width: 215px
+		margin: 40px auto 90px
+.service
+	&_bg
+		padding-top: 1px
+		background-image: url("../img/qwerty.png")
+	h2
+		font-size: 28px
+		color: #FFF
+		text-align: center
+		margin: 55px auto
+		+l_l
+	ul
+		li
+			width: 255px
+			float: left
+			margin: 40px 20px 60px
+			&:first-child
+				margin-left: 40px
+			p
+				position: relative
+				color: #FFF
+				font-size: 16px
+				line-height: 25px
+				+os_l
+				&:before
+					content: ""
+					position: absolute
+					top: -30px
+					left: 0
+					+s(w_bird)
+.xzpl
+	padding: 65px 0 75px
+	background-color: #FFF
+	+clr
+	h3
+		font-size: 28px
+		color: #161616
+		text-align: center
+		margin-top: 30px
+		+l_l
+	&__form
+		width: 850px
+		margin: 60px auto
+		+clr
+		&_contact
+			margin-bottom: 35px
+			+clr
+		&_left
+			float: left
+			width: 392px
+			margin-right: 10px
+		&_right
+			width: 440px
+	&__inp
+		float: left
+		height: 45px
+		vertical-align: top
+		+clr
+		label
+			position: relative
+			color: #898282
+			font-size: 16px
+			+l_l
+			&:after
+				content: "*"
+				position: absolute
+				top: -5px
+				right: -10px
+				color: $red
+				font-size: 20px
+		input
+			height: 45px
+			background-color: #efeeee
+			margin-top: 5px
+			font-size: 18px
+			padding: 0 20px
+			+placeholder-color(#1b1b1b)
+			+l_l
+.inp_tel
+	width: 120px
+	margin-right: 10px
+.inp_mail
+	width: 170px
