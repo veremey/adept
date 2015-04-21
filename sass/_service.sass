@@ -1,8 +1,8 @@
 .job
 	position: relative
-	// display: table-cell
+	float: left
 	width: 244px
-	height: 311px
+	height: 245px
 	padding: 40px 40px 20px 20px
 	vertical-align: top
 	background-color: #fff
@@ -10,13 +10,18 @@
 	+clr
 	+r(768)
 		width: 279px
-		float: left
+		height: 276px - 60px
+		margin-bottom: 1px
+	+r(320)
+		padding-right: 20px
 	&:nth-child(4n)
 		border-right: 1px solid #fff
 	&__wrap
 		// display: table
 		margin-bottom: 70px
 		+clr
+		+r(768)
+			margin-bottom: 40px
 	h2
 		display: block
 		color: $red
@@ -40,7 +45,7 @@
 	&_type
 		position: relative
 		display: block
-		margin: 0 0 40px
+		margin: 0 0 20px
 		&:after
 			display: none
 			content: ""
@@ -64,6 +69,8 @@
 				float: left
 				background-color: #FFF
 				z-index: 2
+				+r(768)
+					font-size: 14px
 			i
 				position: absolute
 				bottom: 10px
@@ -76,12 +83,17 @@
 				color: #161616
 				background-color: #fff
 				z-index: 2
+				+r(768)
+					font-size: 14px
 			+clr
 	.btn__transparent
 		width: 100%
 		position: relative
 		margin: 0
 		color: #191919
+		border: 1px solid #E9E5E4
+		+r(768)
+			font-size: 11px
 		&:hover
 			background-color: darken(#fff, 20%)
 			+tr(.2s)
@@ -117,6 +129,8 @@
 	margin-bottom: 65px
 	background-image: url("../img/st_bg.png")
 	+clr
+	+r(320)
+		margin-bottom: 0
 	&__item
 		display: inline-block
 		position: relative
@@ -132,30 +146,42 @@
 			&:first-child,
 			&:nth-child(2)
 				border-bottom: 1px solid #949494
+			+r(320)
+				height: 120px
+				width: 100%
 		.statistics__in
 			line-height: 163px
 			font-size: 28px
 			margin-left: 40px
 			+l_l
+			+r(320)
+				line-height: 120px
+				margin-left: 20px
 		h2
 			font-size: 48px
 			margin: 45px 0 0 40px
 			+os_ex
+			+r(320)
+				margin: 15px 0 0 20px
 		p
 			font-size: 18px
 			margin-left: 40px
 			+os_l
-.bottom__cut_right
-	&:after
-		content: ""
-		position: absolute
-		bottom: 0
-		right: -1px
-		width: 0
-		height: 0
-		border-style: solid
-		border-width: 0 0 68px 72px
-		border-color: transparent transparent #f9f7f7 transparent
+			+r(320)
+				margin-left: 20px
+	.bottom__cut_right
+		&:after
+			content: ""
+			position: absolute
+			bottom: 0
+			right: -1px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 0 68px 72px
+			border-color: transparent transparent #f9f7f7 transparent
+			+r(320)
+				display: none
 .garant
 	background-color: #FFF
 	padding-top: 55px
@@ -175,15 +201,33 @@
 .star
 	display: inline-block
 	+s(mini_star)
+
+.garant__level_cont_item
+	width: 33%
+	float: left
+	+r(768)
+		width: 50%
+	+r(320)
+		width: 100%
+	p
+		width: 215px
+		margin: 40px auto 90px
+		+r(768)
+			margin-bottom: 40px
 .garant__big
+	position: relative
 	float: left
 	margin-left: 285px
+	z-index: 3
 	+s(big_star)
 	&:first-child
 		margin-left: 140px
-	p
+		+r(768)
+			margin-left: 100px
+	.number
 		line-height: 118px
-		margin-left: 10px
+		margin: 0 0 0 10px
+		width: auto
 		color: $red
 		font-size: 48px
 		+h8h
@@ -195,6 +239,8 @@
 		top: 0
 		right: -240px
 		+s(top_el)
+		+r(320)
+			display: none
 .garant__line_bottom
 	position: relative
 	&:after
@@ -204,13 +250,28 @@
 		right: -240px
 		+rotate(180)
 		+s(top_el)
-.garant__level_cont_item
-	width: 33%
-	float: left
-	p
-		width: 215px
-		margin: 40px auto 90px
+	+r(768)
+		&:after
+			display: none
+.garant__correct_768
+	+r(768)
+		position: relative
+		margin-left: 180px
+		z-index: 2
+	+r(320)
+		margin: 0
+	&:before
+		content: ""
+		position: absolute
+		top: -25px
+		left: 0px
+		+s(lines_768)
+		z-index: 0
+		+r(320)
+			display: none
 .service
+	+r(320)
+		margin-bottom: 0
 	&_bg
 		padding-top: 1px
 		background-image: url("../img/qwerty.png")
@@ -220,13 +281,23 @@
 		text-align: center
 		margin: 55px auto
 		+l_l
+		+r(320)
+			width: 200px
+			margin: 40px auto
 	ul
+		margin: 0 auto
 		li
 			width: 255px
 			float: left
 			margin: 40px 20px 60px
 			&:first-child
 				margin-left: 40px
+			+r(768)
+				width: 240px
+				height: 70px
+				margin: 40px 50px 40px 40px
+			+r(320)
+				margin: 40px
 			p
 				position: relative
 				color: #FFF
@@ -243,6 +314,10 @@
 	padding: 65px 0 75px
 	background-color: #FFF
 	+clr
+	+r(768)
+		padding: 55px 0 40px
+	+r(320)
+		padding: 35px 0 10px
 	h3
 		font-size: 28px
 		color: #161616
@@ -252,12 +327,22 @@
 	&__form
 		position: relative
 		width: 850px
-		margin: 60px auto
+		margin: 60px auto 0
 		+clr
+		+r(768)
+			margin-bottom: 0
+			width: 100%
+		+r(320)
+			width: 300px
 		.btn
 			position: relative
-			margin: 55px 0 55px 280px
+			margin: 55px 0 0px 280px
 			padding: 15px 50px 15px 20px
+			+r(768)
+				margin: 40px 0 0 40px
+			+r(320)
+				width: 275px
+				margin: 10px 0 10px 10px
 			&:after
 				content: ""
 				position: absolute
@@ -277,13 +362,29 @@
 			float: left
 			width: 392px
 			margin-right: 10px
+			+r(768)
+				margin: 0 40px 30px
+				width: 90%
+			+r(320)
+				width: 300px
+				margin: 0 10px 20px
 		&_right
+			float: right
 			width: 440px
+			+r(768)
+				width: 90%
+				float: left
+				margin: 0 40px
+			+r(320)
+				width: 90%
+				margin: 10px
 	&__inp
 		float: left
 		height: 45px
 		vertical-align: top
 		+clr
+		+r(320)
+			margin-bottom: 40px
 		label
 			position: relative
 			color: #898282
@@ -309,18 +410,26 @@
 	margin-right: 10px
 .inp_mail
 	width: 181px
+	+r(320)
+		width: 220px
 .xzpl__file
 	position: relative
 	margin-top: 65px
+	color: #898282
+	+r(320)
+		margin-top: 35px
 .upload
 	position: relative
 	width: 385px
 	height: 45px
 	opacity: 0
 	z-index: 10
+	cursor: pointer
 	&:hover
 		~ .file__mask .file__mask_inside
 			background-color: #f9f7f7
+	+r(320)
+		width: 100%
 .file__mask
 	position: absolute
 	top: 0
@@ -329,6 +438,8 @@
 	margin-top: 25px
 	border: 1px solid #ebe5e5
 	z-index: 1
+	+r(320)
+		width: 90%
 	p
 		float: left
 		line-height: 45px
@@ -355,7 +466,6 @@
 			left: 25px
 			+s(pointer__down)
 .xzpl__form_right
-	float: right
 	label
 		position: relative
 		color: #898282
@@ -368,4 +478,8 @@
 		border: none
 		margin-top: 5px
 		padding: 20px
+		+r(768)
+			width: 560px
+		+r(320)
+			width: 235px
 	+clr

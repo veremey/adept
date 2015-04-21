@@ -30,7 +30,7 @@
 		font-size: 16px
 		color: #202020
 		margin-right: 25px
-		line-height: 73px
+		line-height: 66px
 		+l_r
 		+r(768)
 			line-height: 67px
@@ -47,9 +47,37 @@
 	.is-active
 		color: $red
 	+clr
-.vacancy
-	margin-bottom: 150px
+.tree__long
+	height: auto
+	h3
+		float: left
+		+r(320)
+			width: auto
+			float: left
+	a
+		+r(320)
+			display: block
+			float: left
+			width: auto
+			line-height: 23px
+	.is-active
+		+r(320)
+			&:after
+				display: none
+.tree__wrap
+	width: auto
+	float: left
+	+r(320)
+		width: 185px
+		margin-top: 18px
+		margin-bottom: 20px
+		float: left
 	+clr
+.vacancy
+	margin-bottom: 90px
+	+clr
+	+r(768)
+		margin-bottom: 90px
 .big__title
 	font-size: 101px
 	line-height: 220px
@@ -60,9 +88,14 @@
 		font-size: 78px
 		line-height: 90px
 		margin-bottom: 10px
+		margin-top: 30px
 	+r(320)
 		font-size: 30px
 		line-height: 90px
+.vacancy .big__title
+	+r(320)
+		line-height: 40px
+		margin: 20px 0 40px
 .make
 	position: relative
 	display: block
@@ -130,6 +163,7 @@
 		background-color: #FFF
 		+r(768)
 			height: auto
+			margin-bottom: 30px
 		+r(320)
 			width: 100%
 		> h3
@@ -140,7 +174,7 @@
 		+clr
 	&__list
 		float: left
-		width: 230px
+		width: 250px
 		margin-left: 38px
 		+clr
 		+r(320)
@@ -176,7 +210,34 @@
 	// &:hover
 	// 	.make__mask
 	// 		background-color: $n
-	+clr
+.make__teagle_right
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		top: 115px
+		right: -2px
+		+arr(14, 24, #fff, l)
+		z-index: 6
+		+r(768)
+			top: 50px
+		+r(320)
+			bottom: -2px
+			right: -50%
+.make__teagle_left
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		top: 115px
+		left: -2px
+		+arr(14, 24, #fff, r)
+		z-index: 6
+		+r(768)
+			top: 50px
+		+r(320)
+			bottom: -2px
+			right: -50%
 .btn__wrap
 	margin: 40px auto
 	text-align: center
@@ -187,6 +248,7 @@
 	.btn
 		margin: 0
 		+r(768)
+			width: 207px
 			margin-bottom: 10px
 	.btn__transparent
 		border: 1px solid #DDD6D5
