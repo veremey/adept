@@ -85,6 +85,8 @@ a
 	width: 50%
 	height: 93px
 	background-color: #FFF
+	+r(768)
+		height: 75px
 	+r(320)
 		top: 53px
 		width: 100%
@@ -97,6 +99,8 @@ a
 	height: 93px
 	background-color: #898282
 	z-index: 1
+	+r(768)
+		height: 75px
 	+r(320)
 		height: 53px
 		width: 100%
@@ -259,8 +263,12 @@ nav
 			bottom: 4px
 	.open &
 		opacity: 1
+		display: block
+		+tr(.3s)
 		+r(768)
 			opacity: 0
+			display: none
+			+tr(.3s)
 	.close &
 		display: block
 		opacity: 1
@@ -487,7 +495,6 @@ nav
 			display: none
 		ul
 			top: -285px
-
 	a
 		font-size: 12px
 		padding: 10px 11px
@@ -497,6 +504,9 @@ nav
 		.submenu
 			display: none
 	+clr
+	.bt-nav
+		+r(320)
+			width: 65px
 
 
 .footer nav
@@ -524,6 +534,7 @@ nav
 // 				top: 0
 // 			.line
 // 				left: 65%
+
 .footer__bottom
 	height: 130px
 	.out
