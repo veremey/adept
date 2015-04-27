@@ -603,12 +603,12 @@ nav ul { position: relative; right: 0; top: 4px; padding: 0; list-style: none; }
 
 .pointer__buy { position: absolute; top: 18px; left: 60px; background: url('../img/icons-s646d485f75.png') 0 -1695px no-repeat; width: 11px; height: 9px; }
 
-.statistics { position: relative; width: 100%; margin-bottom: 65px; background-image: url("../img/st_bg.png"); *zoom: 1; }
+.statistics { position: relative; width: 100%; margin-bottom: 65px; background-image: url("../img/st_bg.png"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; *zoom: 1; }
 .statistics:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 320px) { .statistics { margin-bottom: 0; } }
-.statistics__item { display: inline-block; position: relative; color: white; width: 25%; height: 163px; vertical-align: top; margin-right: -5px; border-right: 1px solid #796e6e; background-color: rgba(137, 137, 137, 0.8); }
+.statistics__item { display: inline-block; position: relative; color: white; width: 25%; height: 163px; vertical-align: top; margin-right: -5px; border-right: 1px solid #796e6e; }
 @media only screen and (max-width: 768px) { .statistics__item { width: 50%; }
-  .statistics__item:first-child, .statistics__item:nth-child(2) { border-bottom: 1px solid #949494; } }
+  .statistics__item:first-child, .statistics__item:nth-child(2), .statistics__item:nth-child(3) { border-bottom: 1px solid #949494; } }
 @media only screen and (max-width: 768px) and (max-width: 320px) { .statistics__item { height: 120px; width: 100%; } }
 
 .statistics__item .statistics__in { line-height: 163px; font-size: 28px; margin-left: 40px; font-family: "latoLight", Arial, sans-serif; font-weight: 300; }
@@ -655,7 +655,7 @@ nav ul { position: relative; right: 0; top: 4px; padding: 0; list-style: none; }
 @media only screen and (max-width: 320px) { .garant__correct_768:before { display: none; } }
 
 @media only screen and (max-width: 320px) { .service { margin-bottom: 0; } }
-.service_bg { padding-top: 1px; background-image: url("../img/qwerty.png"); }
+.service_bg { padding-top: 1px; background-image: url("../img/qwerty.png"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .service h2 { font-size: 28px; color: white; text-align: center; margin: 55px auto; font-family: "latoLight", Arial, sans-serif; font-weight: 300; }
 @media only screen and (max-width: 320px) { .service h2 { width: 200px; margin: 40px auto; } }
 .service ul { margin: 0 auto; }
