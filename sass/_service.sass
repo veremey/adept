@@ -179,7 +179,7 @@
 		&:after
 			content: ""
 			position: absolute
-			bottom: 0
+			bottom: -1px
 			right: -1px
 			width: 0
 			height: 0
@@ -264,25 +264,31 @@
 			display: none
 .garant__correct_768
 	+r(768)
+		display: block
 		position: relative
 		margin-left: 180px
 		z-index: 2
+		&:before
+			display: block
 	+r(650)
+		display: block
 		margin: 0
 	&:before
+		display: none
 		content: ""
 		position: absolute
 		top: -25px
 		left: 0px
 		+s(lines_768)
 		z-index: 0
+		+r(768)
+			display: block
 		+r(650)
 			display: none
 .service
 	+r(650)
 		width: 320px
-		margin-bottom: 0
-		margin-left: -10px
+		margin: 0 auto
 	&_bg
 		padding-top: 1px
 		background-image: url("../img/qwerty.png")

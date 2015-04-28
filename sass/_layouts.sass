@@ -19,6 +19,7 @@
 	+r(768)
 		height: 460px
 	+r(650)
+		width: 100%
 		height: 310px
 .big-slider__item
 	position: static
@@ -37,9 +38,13 @@
 		right: 0
 		max-height: 540px
 		height: 540px
+		+r(650)
+			height: 310px
 		img
 			height: 540px
 			width: 100%
+			+r(650)
+				height: 310px
 .nav_page
 	position: absolute
 	display: block
@@ -103,7 +108,7 @@
 		&:after
 			content: ""
 			position: absolute
-			right: -8px
+			right: -7px
 			top: 0
 			bottom: 0
 			width: 0
@@ -128,20 +133,12 @@
 	overflow: hidden
 	+r(768)
 		width: 100%
+	+r(650)
+		width: 320px
 	+clr
 	&:hover
 		.good__item
-			// -webkit-transform: scale(-1) rotate(180deg)
-			// -moz-transform: scale(-1) rotate(180deg)
-			// -o-transform: scale(-1) rotate(180deg)
-			// -ms-transform: scale(-1) rotate(180deg)
-			// transform: scale(-1) rotate(180deg)
 			opacity: 0
-			// -webkit-transition: all 0.4s ease-in
-			// -moz-transition: all 0.4s ease-in
-			// -o-transition: all 0.4s ease-in
-			// -ms-transition: all 0.4s ease-in
-			// transition: all 0.4s ease-in
 			+r(650)
 				opacity: 1
 				-webkit-transform: scale(1) rotate(0deg)
@@ -151,19 +148,6 @@
 				transform: scale(1) rotate(0deg)
 		.mask
 			opacity: 1
-			// -webkit-transform: scale(-1) rotate(-180deg)
-			// -moz-transform: scale(-1) rotate(-180deg)
-			// -o-transform: scale(-1) rotate(-180deg)
-			// -ms-transform: scale(-1) rotate(-180deg)
-			// transform: scale(-1) rotate(-180deg)
-			// -webkit-transition: all 0.4s ease-in
-			// -moz-transition: all 0.4s ease-in
-			// -o-transition: all 0.4s ease-in
-			// -ms-transition: all 0.4s ease-in
-			// transition: all 0.4s ease-in
-			// -webkit-border-radius: 0px
-			// -moz-border-radius: 0px
-			// border-radius: 0px
 			+r(650)
 				display: none
 		.good__img
@@ -181,21 +165,11 @@
 				-ms-transition: all 0.2s
 				transition: all 0.2s
 			&:after
-				// -webkit-transition: all 0.6s ease-in
-				// -moz-transition: all 0.6s ease-in
-				// -o-transition: all 0.6s ease-in
-				// -ms-transition: all 0.6s ease-in
-				// transition: all 0.6s ease-in
 				+arr(8, 16, $red ,l)
 				+r(650)
 					display: none
 		.mask + .good__img
 			&:after
-				// -webkit-transition: all 0.6s ease-in
-				// -moz-transition: all 0.6s ease-in
-				// -o-transition: all 0.6s ease-in
-				// -ms-transition: all 0.6s ease-in
-				// transition: all 0.6s ease-in
 				+arr(8, 16, $red ,r)
 				+r(650)
 					display: none
@@ -418,7 +392,7 @@
 	+r(768)
 		width: 680px
 	+r(650)
-		width: 265px
+		width: 320px
 	.btn
 		position: relative
 		float: right
@@ -475,7 +449,7 @@
 			margin-left: 44px
 			margin-top: 50px
 		+r(650)
-			margin-left: 20px
+			margin-left: 30px
 	p
 		font-size: 16px
 		line-height: 24px
@@ -576,6 +550,8 @@
 		float: right
 		background-color: #F1EFEF
 		+clr
+		+r(650)
+			width: 320px
 		a
 			position: relative//&_link
 			float: left
@@ -589,7 +565,7 @@
 			+r(768)
 				width: 169px
 			+r(650)
-				width: 132px
+				width: 159px
 			&:nth-child(even)
 				margin-left: 0
 				border-right: 1px solid #fff
@@ -610,7 +586,7 @@
 			top: 41px
 	+r(650)
 		&:before
-			right: 0
+			right: 16px
 			top: 45px
 			+s(coin_bg_320)
 .diploma
@@ -628,7 +604,7 @@
 			right: 12px
 	+r(650)
 		&:before
-			right: 0
+			right: 16px
 			top: 27px
 			+s(diploma_bg_320)
 
@@ -689,6 +665,7 @@
 	margin-bottom: 60px
 	+r(650)
 		margin-bottom: 40px
+		width: 320px
 	.client__slide
 		position: relative
 		display: inline-block
@@ -707,10 +684,10 @@
 				left: 50%
 				+translate(-50%,-50%)
 
-
 .map
 	position: relative
 	height: 439px
+	// width: 300px
 	margin-bottom: 40px
 	&:after
 		content: ""
@@ -723,6 +700,9 @@
 		border-width: 0 0 73px 77px
 		border-color: transparent transparent #fff transparent
 	+r(650)
+		width: 300px
+		padding: 0
+		left: 15px
 		&:after
 			display: none
 	img
