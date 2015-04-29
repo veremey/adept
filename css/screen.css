@@ -671,6 +671,7 @@ nav ul { position: relative; right: 0; top: 4px; padding: 0; list-style: none; }
 @media only screen and (max-width: 768px) { .garant__correct_768:before { display: block; } }
 @media only screen and (max-width: 650px) { .garant__correct_768:before { display: none; } }
 
+.service { padding-top: 1px; }
 @media only screen and (max-width: 650px) { .service { width: 320px; margin: 0 auto; } }
 .service_bg { padding-top: 1px; background-image: url("../img/qwerty.png"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .service h2 { font-size: 28px; color: white; text-align: center; margin: 55px auto; font-family: "latoLight", Arial, sans-serif; font-weight: 300; }
@@ -854,3 +855,6 @@ p.date:after { content: none; }
 .resault .red { text-transform: uppercase; color: #aa0002; font-size: 14px; line-height: 23px; font-family: "LATO-REGULAR-webfont", Arial, sans-serif; font-weight: 800; }
 
 @media only screen and (max-width: 650px) { .event .service { margin-left: -10px; width: 310px; } }
+
+.about_bg { background-image: url("../img/about_bg.png"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+@media only screen and (max-width: 650px) { .about_bg { background-image: none; background-color: #ac0204; } }
