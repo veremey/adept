@@ -1,19 +1,46 @@
 .short__title
 	width: 900px
+	+r(768)
+		width: 700px
+	+r(650)
+		width: 290px
 .our
 	float: right
 	width: 308px
 	+clr
+	+r(768)
+		width: 680px
+		-webkit-transform: translateY(923px)
+		-moz-transform: translateY(923px)
+		-ms-transform: translateY(923px)
+		-o-transform: translateY(923px)
+		transform: translateY(923px)
+	+r(650)
+		width: 320px
+		-webkit-transform: none
+		-moz-transform: none
+		-ms-transform: none
+		-o-transform: none
+		transform: none
 .formula
 	position: relative
-	width: 306px
+	width: 308px
 	height: 520px
 	float: right
 	margin-top: 70px
-	padding: 1px
+	padding: 1px 0
 	background-image: url("../img/for.png")
 	+cover
 	+clr
+	+r(768)
+		width: 50%
+		float: left
+		margin-top: 0
+	+r(650)
+		width: 320px
+		float: right
+		width: 310px
+		margin-right: -10px
 	li
 		margin: 45px 0
 		&:nth-child(3)
@@ -42,13 +69,51 @@
 		+l_black
 	+ .award
 		width: 308px
-
+		+r(768)
+			width: 50%
+			float: right
+			height: 522px
+			a
+				margin-left: 1px
+				width: 168px
+		+r(650)
+			width: 310px
+			margin-right: -10px
+		.award__wrap
+			+r(650)
+				width: 311px
+				a
+					width: 153px
+		.award__cup
+			+r(768)
+				height: 236px
+				img
+					margin-top: 80px
 .resault
 	float: left
 	width: 922px - 140px
 	background-color: #FFF
 	padding: 55px 100px 72px 40px
 	+clr
+	+r(768)
+		width: 600px
+		height: 812px
+		padding: 45px 40px 65px
+		-webkit-transform: translateY(-522px)
+		-moz-transform: translateY(-522px)
+		-ms-transform: translateY(-522px)
+		-o-transform: translateY(-522px)
+		transform: translateY(-522px)
+	+r(650)
+		width: 270px
+		height: auto
+		padding: 40px 20px 40px
+		margin-left: -10px
+		-webkit-transform: none
+		-moz-transform: none
+		-ms-transform: none
+		-o-transform: none
+		transform: none
 	&__img
 		text-align: center
 	h2
@@ -57,16 +122,26 @@
 		margin: 40px 0 50px
 		color: #161616
 		+l_l
+		+r(650)
+			margin: 20px 0 20px
 	p
 		font-size: 16px
 		color: #1A1A1A
 		line-height: 26px
 		+os_l
+		+r(650)
+			font-style: 14px
 		strong
 			+os_ex
+			+r(650)
+				font-style: 14px
 	.red
 		text-transform: uppercase
 		color: #aa0002
 		font-size: 14px
 		line-height: 23px
 		+l_black
+.event .service
+	+r(650)
+		margin-left: -10px
+		width: 310px
