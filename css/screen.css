@@ -78,8 +78,9 @@ h1 { font: 0/0 a; text-shadow: none; color: transparent; }
   .menu__link:active { background-color: #544c4c; } }
 
 .has__sub { position: relative; }
-.has__sub:after { content: ""; position: absolute; bottom: -2px; right: 30px; width: 0px; height: 0px; border-style: solid; border-width: 5px 5px 0 5px; border-color: white transparent transparent transparent; z-index: 99; }
-@media only screen and (max-width: 768px) { .has__sub:after { display: none; } }
+.has__sub:hover:before { display: block; }
+.has__sub:before { display: none; content: ""; position: absolute; bottom: -1px; right: 30px; width: 0px; height: 0px; border-style: solid; border-width: 5px 5px 0 5px; border-color: white transparent transparent transparent; z-index: 99; }
+@media only screen and (max-width: 768px) { .has__sub:before { display: none; } }
 
 .submenu { display: none; position: absolute; top: 33px; right: -134px; background-color: #898282; padding: 27px 25px; z-index: 98; }
 .submenu li { width: 200px; height: auto; border-bottom: 1px solid #9b9595; background-color: #898282; }

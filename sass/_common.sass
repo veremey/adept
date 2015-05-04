@@ -211,10 +211,14 @@ h1
 				background-color: #544c4c
 .has__sub
 	position: relative
-	&:after
+	&:hover
+		&:before
+			display: block
+	&:before
+		display: none
 		content: ""
 		position: absolute
-		bottom: -2px
+		bottom: -1px
 		right: 30px
 		+arr(10, 5, #fff, b)
 		z-index: 99
