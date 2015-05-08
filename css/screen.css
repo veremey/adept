@@ -330,7 +330,7 @@ nav ul { position: relative; right: 0; top: 4px; padding: 0; list-style: none; }
 @media only screen and (max-width: 650px) { .partner__item_img { display: none; } }
 .partner__item_img img { height: 440px; width: 100%; }
 .partner__item_img:hover .partner__container { background-color: #aa0002; }
-.partner__item_img:hover .partner__container:before { border-color: transparent transparent #aa0002 transparent; }
+.partner__item_img:hover .partner__container:before { background-color: transparent; border-color: transparent transparent #aa0002 transparent; }
 .partner__item_img:active .partner__container { background-color: #8f0002; }
 .partner__item_img:active .partner__container:before { border-color: transparent transparent #8f0002 transparent; }
 
