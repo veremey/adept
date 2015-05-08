@@ -27,7 +27,7 @@
 	left: 0
 	width: 100%
 	z-index: 100
-	opacity: 1
+	+opacity(1)
 	visibility: hidden
 	display: block
 	height: 540px
@@ -61,7 +61,7 @@
 		height: 12px
 		border-radius: 50%
 		background-color: #fff
-		opacity: 0.8
+		+opacity(0.8)
 		margin-left: 15px
 		&:hover
 			+scale(1.2)
@@ -138,16 +138,18 @@
 	+clr
 	&:hover
 		.good__item
-			opacity: 0
+			+opacity(0)
+			z-index: 9
 			+r(650)
-				opacity: 1
+				+opacity(1)
 				-webkit-transform: scale(1) rotate(0deg)
 				-moz-transform: scale(1) rotate(0deg)
 				-o-transform: scale(1) rotate(0deg)
 				-ms-transform: scale(1) rotate(0deg)
 				transform: scale(1) rotate(0deg)
 		.mask
-			opacity: 1
+			+opacity(1)
+			z-index: 10
 			+r(650)
 				display: none
 		.good__img
@@ -307,7 +309,7 @@
 		-o-transition: all 0.4s ease-in-out 0.2s
 		-ms-transition: all 0.4s ease-in-out 0.2s
 		transition: all 0.4s ease-in-out 0.2s
-		opacity: 1
+		+opacity(1)
 		+l_black
 		+r(768)
 			margin-right: 85px
@@ -352,7 +354,7 @@
 	overflow: hidden
 	background-color: $red
 	color: #FFF
-	opacity: 0
+	+opacity(0)
 	+r(650)
 		display: none
 	p
